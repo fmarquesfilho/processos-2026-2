@@ -31,7 +31,7 @@ Templates, exemplos e estrutura do vídeo e da proposta: [SPRINT-0.md](SPRINT-0.
 |----------|------|----------------|----------------|--------------------|
 | **Definição do problema** | 25% | Problema real, delimitado, com público-alvo identificado e evidência de que existe | Problema plausível mas genérico | Problema vago ou ausente |
 | **Escopo do MVP** | 25% | MVP viável em 4 sprints, com critérios de "pronto" explícitos e fora-de-escopo declarado | MVP descrito mas sem limites claros | Escopo irreal ou indefinido |
-| **Backlog inicial** | 25% | ≥ 10 itens no GitHub Projects, escritos como resultado para o usuário, ≥ 3 estimados, priorizados | ≥ 10 itens listados, priorização frágil | < 10 itens ou lista de tarefas técnicas sem valor de usuário |
+| **Backlog inicial** | 25% | ≥ 5 itens no GitHub Projects, escritos como resultado para o usuário, ≥ 3 estimados, priorizados | ≥ 5 itens listados, priorização frágil | < 5 itens ou lista de tarefas técnicas sem valor de usuário |
 | **Configuração do processo** | 25% | Repositório público, README completo, quadro Kanban criado com colunas e WIP declarado, papéis do Scrum atribuídos, coorte declarada | Repositório e quadro criados, configuração incompleta | Repositório privado, sem quadro ou sem README |
 
 ---
@@ -108,7 +108,7 @@ Pode ser copiado para o `README.md` do repositório.
 ### Sprint 0
 - [ ] Repositório público + README completo
 - [ ] docs/proposta.md (≤3 pág.)
-- [ ] GitHub Projects com ≥10 itens, ≥3 estimados
+- [ ] GitHub Projects com ≥5 itens, ≥3 estimados
 - [ ] Coorte declarada (A=presencial / B=online)
 - [ ] Integração com outra disciplina declarada (se houver)
 - [ ] Vídeo 5 min

@@ -73,7 +73,7 @@ O backlog vive no **GitHub Projects**, em formato Kanban, com as colunas:
 | Em revisão | Aguardando revisão de código |
 | Pronto | Atende à Definição de Pronto |
 
-Formato de história de usuário: **como [papel], quero [ação] para [benefício]**.
+Mínimo de 5 itens no GitHub Projects, ao menos 3 estimados, todos priorizados. Formato de história de usuário: **como [papel], quero [ação] para [benefício]**.
 
 | Prio | História | Critérios de aceitação | Sprint |
 |---|---|---|---|
@@ -123,4 +123,4 @@ Todos os integrantes devem falar.
 6. Equipe: nome, matrícula e papel de cada integrante
 7. Coorte de apresentação, link do quadro no GitHub Projects e, se houver, integração com outra disciplina
 
-Máximo 3 páginas.
+Máximo 5 páginas.
