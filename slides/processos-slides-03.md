@@ -116,8 +116,6 @@ Prof. Fernando · UFRN · 2026.2
 | Pair e revisão | Propriedade coletiva do código |
 | No MUSI | Onde cada prática deixa evidência |
 
-> No fim da semana: backlog refinado, e o vocabulário técnico da Sprint 1.
-
 ---
 
 # Onde paramos
@@ -131,7 +129,7 @@ Na aula passada, o Scrum e uma primeira passada pelo backlog, para viabilizar a 
   Definição de Pronto
 ```
 
-Aquilo bastou para planejar uma sprint de mentira. Hoje aprofundamos os pontos que mais custam na prática, e aplicamos ao backlog de verdade do projeto.
+Aquilo bastou para planejar uma sprint. Hoje aprofundamos os pontos que mais custam na prática, e aplicamos ao backlog do projeto.
 
 ---
 
@@ -139,12 +137,9 @@ Aquilo bastou para planejar uma sprint de mentira. Hoje aprofundamos os pontos q
 
 | Fonte | Foco |
 |---|---|
-| Cohn — *User Stories Applied* | O livro sobre histórias |
-| Patton — *User Story Mapping* | O mapa de história, capítulo a capítulo |
-| `agileforall.com` — SPIDR | Cinco padrões de divisão de história |
 | Rubin — *Essential Scrum*, cap. 6 | Backlog, refinamento e estimativa |
 
-O padrão SPIDR, de Mike Cohn, é o guia mais prático para o que mais trava vocês: quebrar história grande.
+Disponível no SIGAA.
 
 ---
 
@@ -201,11 +196,11 @@ No MUSI, cada peça do processo se conecta à anterior:
 - A ADR habilita histórias; a história se quebra em tarefas; a tarefa vira commit e PR
 - Pensar assim é pensar de forma sistêmica: cada item sabe de onde veio e por quê
 
-> `processo/README.md` do MUSI mostra essa cadeia funcionando num projeto real. É o que separa um backlog de desejos de um backlog que reflete decisões.
+> `processo/README.md` do MUSI mostra essa cadeia funcionando num projeto real.
 
 ---
 
-# O erro que se repete toda Sprint 0
+# Foco na entrega de valor
 
 ```
   Backlog "de tarefas"                Backlog de valor
@@ -216,7 +211,7 @@ No MUSI, cada peça do processo se conecta à anterior:
   Modelar as entidades                Fechar a conta do mês
 ```
 
-A coluna da esquerda é trabalho; a da direita é resultado para alguém. O backlog é feito da direita.
+A coluna da esquerda é trabalho; a da direita é resultado para alguém. O backlog contém itens que entregam um valor tangível.
 
 > Se ninguém percebe nada quando o item termina, ele não é uma história — é uma tarefa. Tarefa vive dentro da história, não no topo do backlog.
 
@@ -227,8 +222,6 @@ A coluna da esquerda é trabalho; a da direita é resultado para alguém. O back
 # Parte 1
 
 ## Fatiar vertical
-
-A habilidade central de hoje.
 
 ---
 
@@ -310,9 +303,7 @@ A divisão mais barata: separe o caso comum dos casos de borda.
        └── (4) Editar uma despesa já lançada      ← extensão
 ```
 
-Entregue o item (1) primeiro: é a fatia que prova a ideia. As bordas viram histórias próprias, priorizadas por valor.
-
-> Empurrar caso de borda para depois não é dívida escondida: é priorização honesta. O que não pode é a borda entrar de contrabando na história do caminho feliz e estourar a estimativa.
+> Entregue o item (1) primeiro: é a fatia que prova a ideia. As bordas viram histórias próprias, priorizadas por valor.
 
 ---
 
@@ -320,7 +311,7 @@ Entregue o item (1) primeiro: é a fatia que prova a ideia. As bordas viram hist
 
 | Sinal | O que costuma esconder |
 |---|---|
-| A estimativa passou de 13 pontos | Mais de uma história disfarçada |
+| A estimativa de esforço está enorme | Pode ser dividido em itens menos complexos |
 | O "e" no título (*registrar e editar*) | Duas histórias grudadas |
 | Ninguém consegue estimar | Ainda não foi entendida |
 | Muitos critérios de aceitação | Vários resultados diferentes juntos |
@@ -380,7 +371,7 @@ O mapa de história (Jeff Patton) organiza o backlog em duas dimensões: a jorna
 | Descobre-se um passo faltando na Review | O buraco na espinha aparece antes |
 | "Está 80% pronto" (mas não usa) | Cada corte é utilizável de ponta a ponta |
 
-> Um MVP que faz login lindo e não deixa registrar nada está "80% pronto" e serve a ninguém. O mapa expõe isso na Sprint 0, não na entrega.
+> Um MVP que faz login e não deixa registrar nada está "80% pronto" e serve a ninguém. O mapa expõe isso na Sprint 0, não mais pra frente no projeto.
 
 ---
 
@@ -403,11 +394,11 @@ Pontos não têm significado sozinhos. Ganham sentido contra uma história de re
     uma história pequena e clara  →  2 pontos   (a "régua")
 
   Estimem o resto por comparação:
-    "isto é o dobro daquela"      →  5
+    "isto é o dobro daquela"      →  4
     "isto é bem menor"            →  1
 ```
 
-> Sem uma régua compartilhada, cada pessoa estima numa escala própria e o planning poker vira leilão. Definam a história de 2 pontos antes de estimar o backlog.
+> Sem uma régua compartilhada, cada pessoa estima numa escala própria. Definam a história de 2 pontos -- ou ainda selecionem uma referência para história P, outra para M e outra para G, se estiverem usando a metáfora do tamanho de roupa -- antes de estimar o backlog.
 
 ---
 
@@ -423,7 +414,7 @@ Confira uma estimativa contra duas outras já feitas, não contra horas:
 
 Se um "5" parece maior que um "8" já estimado, algo está errado em um dos dois — e essa conversa vale mais que o número final.
 
-> Estimativa boa é consistente, não precisa. O objetivo é que 5 seja sempre maior que 3, não que 5 seja exatamente 5 de algo.
+> Estimativa boa é consistente, não precisa. O objetivo é que 5 seja sempre maior que 3, não que 5 de um valor objetivo (em horas, por exemplo). O mesmo se aplica para a metáfora do P, M e G.
 
 ---
 
@@ -465,7 +456,7 @@ História: registrar uma despesa compartilhada
 
 O "Dado" é o estado inicial; o "Quando" é a ação; o "Então" é o resultado observável.
 
-> Se você não consegue escrever o "Então", também não vai conseguir escrever o teste — e provavelmente não entendeu a história.
+> Se você não consegue escrever o "Então", também não vai conseguir escrever o teste.
 
 ---
 
@@ -476,9 +467,9 @@ O "Dado" é o estado inicial; o "Quando" é a ação; o "Então" é o resultado 
 | Definição de Pronto | Todos os itens | A equipe |
 | Critérios de aceitação | Aquele item | O Product Owner |
 
-Um item está completo quando cumpre os dois. Ele pode passar em todos os seus critérios e ainda não estar pronto — por não ter sido revisado, ou por deixar a CI vermelha.
+Um item está completo quando cumpre os dois. Ele pode passar em todos os seus critérios e ainda não estar pronto — por não ter sido revisado, ou por quebrar a CI.
 
-> A Definição de Pronto também evolui: comece pelo que dá para cumprir hoje (na branch, revisado em PR, critérios conferidos) e aperte a cada sprint (testes, CI verde, sem aviso do linter).
+> A Definição de Pronto também evolui: comece pelo que dá para cumprir hoje (na branch, revisado em PR, critérios conferidos) e evolua os critérios a cada sprint (testes, CI passando).
 
 ---
 
@@ -486,9 +477,7 @@ Um item está completo quando cumpre os dois. Ele pode passar em todos os seus c
 
 # Parte 5
 
-## Um backlog de verdade
-
-O exemplo vivo, no GitHub.
+## Um exemplo de backlog
 
 ---
 
@@ -532,7 +521,7 @@ O quadro do MUSI é deliberadamente enxuto: quadros com muitos campos ficam desa
 
 ---
 
-# Oficina — 25 minutos, no backlog de verdade
+# Exercício
 
 Com o backlog inicial do grupo aberto no GitHub Projects:
 
@@ -542,38 +531,11 @@ Com o backlog inicial do grupo aberto no GitHub Projects:
      ou marquem como tarefa de outra história
   3. Rascunhem o mapa: 3 a 5 atividades no topo, e a linha do MVP
   4. Escolham a história de referência de 2 pontos
-  5. Estimem 5 histórias por comparação, com planning poker
+  5. Estimem 5 histórias por comparação a uma ou mais referências já estimadas
   6. Escrevam os critérios da história do topo em Dado/Quando/Então
 ```
 
-> No fim, cada grupo mostra a história que mais mudou depois de fatiada. Costuma ser a que estava escondendo uma sprint inteira.
-
----
-
-# Erros que aparecem sempre
-
-| Erro | O que acontece |
-|---|---|
-| Backlog de tarefas técnicas | Nada é demonstrável na Review |
-| História que cresce sem fim | Nunca cabe numa sprint; nunca fecha |
-| Estimar sem régua | Planning poker vira leilão sem base |
-| Critério vago ("deve funcionar") | Não dá para dizer se está pronto |
-| MVP = topo da lista | Falta um passo da jornada, descoberto tarde |
-| DoD copiada, não cumprida | O "pronto" deixa de significar algo |
-
-> Os dois primeiros são os que mais reprovam Sprint 0: backlog de tarefas, e MVP que não atravessa a jornada.
-
----
-
-# Fecho de segunda
-
-Vocês saem com o backlog fatiado, mapeado e estimado. Entre hoje e quarta:
-
-- Backlog no GitHub Projects refinado: histórias fatiadas, tarefa no lugar de tarefa
-- As histórias do topo com critérios em Dado/Quando/Então
-- Estimativas em pontos, com a história de referência registrada
-
-> Quarta responde à pergunta que o Scrum deixa aberta: como a equipe programa para sustentar esse ritmo?
+> No fim, cada grupo mostra a história que mais mudou depois de fatiada.
 
 ---
 
@@ -582,8 +544,6 @@ Vocês saem com o backlog fatiado, mapeado e estimado. Entre hoje e quarta:
 # Quarta · 02/09
 
 ## Extreme Programming
-
-O "como" técnico, por trás do "pronto".
 
 ---
 
@@ -596,9 +556,9 @@ O Scrum organiza quando as decisões acontecem e quem as toma. Não diz como pro
   XP      como                     testes, refatoração, pares, integração
 ```
 
-Extreme Programming (Kent Beck, 1999) é o conjunto de práticas técnicas que sustenta a entrega frequente. As duas se encaixam: Scrum por fora, XP por dentro.
+Extreme Programming (Kent Beck, 1999) é o conjunto de práticas técnicas que sustenta a entrega frequente.
 
-> Equipe com Scrum organizado e sem prática técnica entrega rápido por duas sprints e depois afunda em dívida. O XP é o que mantém o "ritmo sustentável" do quinto princípio ágil.
+> Equipe com Scrum organizado e sem prática técnica entrega rápido por duas sprints e depois afunda em dívida. As práticas de fundamentos conceituais do XP ajudam a manter um "ritmo sustentável".
 
 ---
 
@@ -638,9 +598,7 @@ Pegar o que sabidamente funciona e fazer o tempo todo:
   Entendimento       design simples · propriedade coletiva · padrão de código
 ```
 
-Nenhuma se sustenta sozinha: TDD sem CI acumula teste que ninguém roda; refatoração sem teste é aposta.
-
-> Vocês não precisam adotar todas na Sprint 1. Escolham uma, com evidência no repositório — é o que a rúbrica cobra.
+Nenhuma se sustenta sozinha: TDD sem CI acumula teste que ninguém roda; refatoração sem teste é arriscada.
 
 ---
 
@@ -662,23 +620,6 @@ O teste vem antes e define o que "pronto" significa para aquele pedaço.
 
 ---
 
-# TDD no MUSI
-
-A Definição de Pronto do MUSI transforma TDD em regra verificável:
-
-```
-  DoD — História ou Tarefa de código
-    [ ] Teste automatizado que falharia sem a mudança
-    [ ] CI verde no job do componente
-    [ ] PR revisado por quem não escreveu o código
-```
-
-Abram no IDE: os testes das três linguagens *carregam* os mesmos casos de `contratos/exemplos/`, então uma mudança num só arquivo alcança todas.
-
-> `processo/definicao-de-pronto.md`. "Teste que falharia sem a mudança" é a forma operacional de dizer TDD: se o teste passa mesmo sem o código novo, ele não testa nada.
-
----
-
 # Design evolutivo e refatoração
 
 Você não precisa acertar o design de primeira. Precisa manter o código simples e mudá-lo com segurança.
@@ -686,12 +627,12 @@ Você não precisa acertar o design de primeira. Precisa manter o código simple
 | Prática | O que evita |
 |---|---|
 | Design simples | Abstração especulativa que nunca é usada |
-| Refatoração contínua | O "grande refactor" que nunca acontece |
+| Refatoração contínua | Evita refatorações gigantes |
 | Rede de testes | Medo de mexer no que funciona |
 
 No MUSI, cada decisão de design que não é óbvia vira uma ADR — e uma ADR pode ser substituída quando a realidade a contradiz.
 
-> `docs/decisoes/`. O design não é congelado no início: é registrado e revisado. Refatorar fica barato quando o teste segura e a decisão está documentada.
+> `docs/decisoes/`. O design não é congelado no início: é registrado e revisado. Refatorar fica barato quando os testes cobrem as funcionalidades principais e a decisão está documentada.
 
 ---
 
@@ -734,27 +675,11 @@ Integrar é juntar seu trabalho ao dos outros, várias vezes ao dia, com o build
        (várias vezes ao dia, não um massivo na véspera)
 ```
 
-No MUSI, `.github/workflows/ci.yml` roda um job por componente; a DoD exige CI verde para o item sair de "Em revisão". A regra de arquitetura do domínio Go é verificada ali, pelo `arch-go`.
-
-> É o oposto do "integration hell": quanto mais raro o merge, mais caro. Os 30% de atividade do repositório medem exatamente isto.
+> No MUSI, `.github/workflows/ci.yml` roda um job por componente; a DoD exige CI verde para o item sair de "Em revisão". A regra de arquitetura do domínio Go é verificada ali, pelo `arch-go`.
 
 ---
 
-# XP e Scrum, juntos
-
-| Scrum responde | XP responde |
-|---|---|
-| Quando planejamos e entregamos | Como escrevemos o código |
-| Quem decide prioridade | Como mantemos o design simples |
-| O que entra na sprint | Como garantimos que não quebrou |
-
-O quadro Kanban e a Definição de Pronto são a dobradiça: é na DoD que as práticas do XP viram critério verificável.
-
-> Por isso a DoD de vocês importa tanto: é onde "queremos qualidade" vira "teste que falha sem a mudança, CI verde, PR revisado".
-
----
-
-# Como o MUSI evidencia XP — abram no IDE
+# Exemplos no projeto de referência (MUSI)
 
 | Prática | Onde ver |
 |---|---|
@@ -799,9 +724,7 @@ O enunciado de cada entrega está em `docs/SPRINT-0-TAREFAS.md` — uma tarefa p
 
 **Histórias, fatiamento e estimativa**
 
-- Cohn — *User Stories Applied* · *SPIDR* (`agileforall.com`) · *Agile Estimating and Planning*
-- Patton — *User Story Mapping*
-- Rubin — *Essential Scrum*, cap. 6
+- Rubin — *Essential Scrum*, cap. 6 (livro completo no SIGAA)
 
 **Extreme Programming**
 
