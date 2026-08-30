@@ -695,6 +695,22 @@ No MUSI, cada decisão de design que não é óbvia vira uma ADR — e uma ADR p
 
 ---
 
+# A regra de ouro: coesão e acoplamento
+
+No fundo, a qualidade de um projeto cabe numa frase: cada parte faz uma coisa (coesão alta) e sabe o mínimo sobre as outras (acoplamento baixo).
+
+```
+  Coesão alta        cada componente com um papel: domínio, busca, conciliação
+  Acoplamento baixo  dependências apontam para dentro, por portas e contratos
+```
+
+- O campo `Componente` do backlog nomeia essas fronteiras
+- Uma história que atravessa muitos componentes é sinal de acoplamento alto — e de uma fatia mal cortada
+
+> No MUSI, isso não é intenção: é verificado. O `arch-go` e o compilador barram o domínio de conhecer HTTP; os testes de contrato barram as três implementações de divergir. É o que transforma "queremos qualidade" numa propriedade que se sustenta.
+
+---
+
 # Pair programming e propriedade coletiva
 
 Duas pessoas, um problema: revisão contínua, conhecimento espalhado, menos código que só uma pessoa entende.
