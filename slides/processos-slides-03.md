@@ -707,7 +707,7 @@ No fundo, a qualidade de um projeto cabe numa frase: cada parte faz uma coisa (c
 - O campo `Componente` do backlog nomeia essas fronteiras
 - Uma história que atravessa muitos componentes é sinal de acoplamento alto — e de uma fatia mal cortada
 
-> No MUSI, isso não é intenção: é verificado. O `arch-go` e o compilador barram o domínio de conhecer HTTP; os testes de contrato barram as três implementações de divergir. É o que transforma "queremos qualidade" numa propriedade que se sustenta.
+> No projeto de exemplo (MUSI), a ferramenta `arch-go` e o compilador impedem o domínio de conhecer HTTP, e os testes de contrato impedem as três implementações de divergir.
 
 ---
 
