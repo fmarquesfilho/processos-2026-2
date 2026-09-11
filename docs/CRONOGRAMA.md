@@ -5,6 +5,8 @@
 
 As aulas de 10/08, 12/08 e 17/08 não foram realizadas. O curso inicia em 19/08.
 
+**Ajuste de 11/09.** Por remanejamento de aulas no início de setembro, a Sprint 0 foi estendida e sua entrega passou para **16/09** (quarta), 23:59. A Sprint 1 foi condensada em duas aulas de conteúdo (**14 e 21/09**), com encontros de acompanhamento de projeto em **16 e 23/09**. As seções abaixo já refletem o ajuste.
+
 ---
 
 ## Legenda
@@ -14,7 +16,7 @@ As aulas de 10/08, 12/08 e 17/08 não foram realizadas. O curso inicia em 19/08.
 | 🟢 | Aula presencial |
 | 🎤 | Apresentação dos grupos (presencial ou online, conforme a coorte) |
 | 🔵 | Encontro online no Google Meet — aula ou apoio ao projeto |
-| 🚀 | Entrega da sprint, sexta-feira às 23:59 |
+| 🚀 | Entrega da sprint, às 23:59 |
 | 📚 | Prova escrita, presencial, em laboratório |
 | 🔴 | Feriado ou atividades suspensas |
 | — | Sem encontro |
@@ -25,7 +27,7 @@ As aulas de 10/08, 12/08 e 17/08 não foram realizadas. O curso inicia em 19/08.
 
 Uma Sprint 0 de quatro semanas, três sprints de projeto e um bloco final. Cada sprint tem duas ou três aulas presenciais com o conteúdo, um ou dois encontros online no horário da aula, e dois dias de apresentação na última semana — uma sessão online e uma em sala.
 
-Todos os grupos apresentam em todas as sprints, exceto na Sprint 0. A entrega vence na sexta-feira que encerra a sprint. As regras de nota estão em [AVALIACAO.md](AVALIACAO.md).
+Todos os grupos apresentam em todas as sprints, exceto na Sprint 0. As regras de nota estão em [AVALIACAO.md](AVALIACAO.md).
 
 ---
 
@@ -33,7 +35,7 @@ Todos os grupos apresentam em todas as sprints, exceto na Sprint 0. A entrega ve
 
 | Bloco | Período | Tema | Apresentações | Entrega |
 |-------|---------|------|---------------|---------|
-| Sprint 0 | 17/08 a 11/09 | Fundamentos e proposta | — | 11/09 |
+| Sprint 0 | 17/08 a 14/09 | Fundamentos e proposta | — | 16/09 |
 | Sprint 1 | 14/09 a 02/10 | Fluxo de trabalho | 28 e 30/09 | 02/10 |
 | Sprint 2 | 05/10 a 23/10 | Automação da entrega | 14 e 19/10 | 23/10 |
 | Sprint 3 | 26/10 a 20/11 | Fluxo de valor e qualidade | 16 e 18/11 | 20/11 |
@@ -71,7 +73,7 @@ Na Sprint 2 a ordem se inverte por causa do feriado de 12/10 e da prova de 21/10
 
 ## Sprint 0 — Fundamentos e proposta
 
-**17/08 a 11/09. Entrega: 11/09 (sexta), 23:59.**
+**17/08 a 14/09. Entrega: 16/09 (quarta), 23:59.**
 
 | Data | Dia | Tipo | Atividade |
 |------|-----|------|-----------|
@@ -79,10 +81,10 @@ Na Sprint 2 a ordem se inverte por causa do feriado de 12/10 e da prova de 21/10
 | 19/08 | Qua | 🟢 | Apresentação do curso e dos critérios de avaliação. Introdução a processos de software. Modelos de ciclo de vida: cascata, espiral, modelo V, iterativo-incremental, Processo Unificado |
 | 24/08 | Seg | 🟢 | Manifesto Ágil. Scrum: papéis, cerimônias e artefatos. Simulação de Sprint Planning. Formação de grupos, escolha de coorte e definição do projeto. Configuração do GitHub Projects |
 | 26/08 | Qua | 🔵 | Encontro online — dúvidas sobre a proposta |
-| 31/08 | Seg | 🟢 | Backlog e histórias de usuário: INVEST, critérios de aceitação e fatiamento vertical. Estimativa: pontos, planning poker e velocidade. Definição de Pronto |
-| 02/09 | Qua | 🟢 | Extreme Programming: valores, práticas técnicas, design evolutivo, TDD e pair programming |
+| 31/08 | Seg | 🔵 | Encontro online de acompanhamento de projetos (aula remanejada) |
+| 02/09 | Qua | 🔴 | Aula cancelada — conteúdo remanejado para 09 e 14/09 |
 | 07/09 | Seg | 🔴 | Independência do Brasil |
-| 09/09 | Qua | 🔵 | Encontro online — dúvidas sobre a proposta e o acordo de processo |
+| 09/09 | Qua | 🟢 | Backlog e histórias de usuário: INVEST, critérios de aceitação e fatiamento vertical. Estimativa: pontos, planning poker e velocidade. Definição de Pronto. |
 
 O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-0). Guia com templates e exemplos: [SPRINT-0.md](SPRINT-0.md).
 
@@ -94,10 +96,10 @@ O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-0). Guia com
 
 | Data | Dia | Tipo | Atividade |
 |------|-----|------|-----------|
-| 14/09 | Seg | 🟢 | Lean: sete princípios e sete desperdícios. Kanban: princípios, práticas, WIP limits e Lei de Little |
-| 16/09 | Qua | 🟢 | Métricas de fluxo: lead time, cycle time e throughput. Retrospectivas eficazes e gestão visual |
-| 21/09 | Seg | 🔵 | Encontro online — dúvidas sobre o projeto |
-| 23/09 | Qua | 🟢 | Oficina: configuração do quadro, definição dos WIP limits e condução da primeira retrospectiva |
+| 14/09 | Seg | 🟢 | Conclui as pendências da Sprint 0 (Extreme Programming). Início da Sprint 1 — **Lean**: sete princípios e sete desperdícios. **Kanban**: princípios, práticas, WIP limits e Lei de Little |
+| 16/09 | Qua | 🔵 | Encontro online de acompanhamento de projetos. **Entrega da Sprint 0, 23:59** |
+| 21/09 | Seg | 🟢 | **Métricas de fluxo**: lead time, cycle time e throughput. Retrospectivas eficazes e gestão visual. Oficina: configuração do quadro, definição dos WIP limits e condução da primeira retrospectiva |
+| 23/09 | Qua | 🔵 | Encontro online de acompanhamento de projetos |
 | 28/09 | Seg | 🎤 | Apresentações da Coorte B, online |
 | 30/09 | Qua | 🎤 | Apresentações da Coorte A, em sala de aula |
 
