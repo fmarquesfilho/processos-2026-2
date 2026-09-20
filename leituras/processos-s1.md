@@ -359,6 +359,28 @@ em faixas empilhadas. Como ler:
 Para montar um CFD à mão: uma vez por dia, contem os cartões de cada coluna e anotem numa
 planilha; o gráfico de área empilhada da planilha é o CFD.
 
+### 7.6 Quando o quadro não registra: medir pelo repositório
+
+Um quadro que não se move não produz métrica nenhuma: sem item em "Pronto", não há
+throughput nem cycle time. Isso não deixa a equipe sem dados — o repositório registra
+fluxo o tempo todo, e o `gh` (a linha de comando do GitHub) o devolve em JSON:
+
+```bash
+git log --format='%ad %h %s' --date=short               # ritmo de integração
+gh pr list --state all --json createdAt,mergedAt,reviews  # espera por revisão
+gh issue list --state all --json createdAt,closedAt       # idade dos itens
+gh run list --json conclusion,createdAt,updatedAt         # CI: falhas e tempo de retorno
+```
+
+O tempo entre a abertura e a integração de um PR é um cycle time observado; a diferença
+entre a data de abertura da issue e a do PR que a fecha é um lead time observado. É menos
+completo que o quadro — não enxerga a espera antes de alguém começar —, e é por isso que o
+quadro existe. Mas serve para a primeira retrospectiva e, principalmente, para mostrar a
+distância entre o processo declarado e o praticado.
+
+O projeto de referência tem essa coleta feita, com o comando ao lado de cada número:
+`processo/metricas-01.md`, em `github.com/fmarquesfilho/musi`.
+
 ---
 
 ## 8. Gestão visual e gargalos
@@ -461,6 +483,33 @@ a comunicação" não é ação; "pedir revisão no grupo, com o link do PR" é.
 
 📖 Ref. Esther Derby e Diana Larsen, *Agile Retrospectives: Making Good Teams Great*
 (Pragmatic Bookshelf, 2006).
+
+### 9.5 Um exemplo real, com números
+
+`processo/retrospectiva-01.md`, no projeto de referência
+(`github.com/fmarquesfilho/musi`), é uma retrospectiva escrita sobre dados do próprio
+repositório, e não sobre impressões. Os fatos que ela abre:
+
+| Fato | Número |
+|---|---|
+| Cartões no quadro, todos em "Todo" | 3, sem nenhuma mudança de status em 22 dias |
+| Commits direto na `main`, sem pull request | 32 de 43 (74%) |
+| Único pull request | integrado em 48 min, sem revisão registrada |
+| `main` vermelha depois de uma falha de CI | 25,8 h |
+| Issues de débito abertas e paradas | 3, há 22 dias |
+
+O interessante é o que esses números contradizem: o acordo de processo prometia limites de
+WIP em colunas que o quadro não tinha, revisão 24 h depois em equipe de um, e métricas
+tiradas dos *Insights* do GitHub Projects — que, com o quadro parado, não produzem nada.
+
+A causa raiz, pelos 5 Porquês, não foi falta de disciplina: o quadro estava **ao lado** do
+trabalho, e não no caminho dele. Enquanto commitar direto na `main` for o caminho mais
+curto, nenhum quadro fica atualizado. Daí a ação principal ser mecânica (proteger a branch,
+exigindo pull request), e não uma promessa de comportamento.
+
+Vale ler junto com o `processo/acordo-de-processo.md` do mesmo projeto: a retrospectiva
+altera três pontos dele, e é esse ciclo — acordo, realidade, acordo revisado — que a
+rubrica procura.
 
 ---
 
