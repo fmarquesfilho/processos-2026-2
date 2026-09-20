@@ -98,7 +98,7 @@ O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-0). Guia com
 |------|-----|------|-----------|
 | 14/09 | Seg | 🟢 | Conclui as pendências da Sprint 0 (Extreme Programming). Início da Sprint 1 — **Lean**: sete princípios e sete desperdícios. **Kanban**: princípios, práticas, WIP limits e Lei de Little |
 | 16/09 | Qua | 🔵 | Encontro online de acompanhamento de projetos. **Entrega da Sprint 0, 23:59** |
-| 21/09 | Seg | 🟢 | **Métricas de fluxo**: lead time, cycle time e throughput. Retrospectivas eficazes e gestão visual. Oficina: configuração do quadro, definição dos WIP limits e condução da primeira retrospectiva |
+| 21/09 | Seg | 🔵 | **Métricas de fluxo**: lead time, cycle time e throughput. Retrospectivas eficazes e gestão visual. Oficina: configuração do quadro, definição dos WIP limits e retrospectiva |
 | 23/09 | Qua | 🔵 | Encontro online de acompanhamento de projetos |
 | 28/09 | Seg | 🎤 | Apresentações da Coorte B, online |
 | 30/09 | Qua | 🎤 | Apresentações da Coorte A, em sala de aula |
