@@ -331,40 +331,6 @@ Formatos para coletar: **Começar/parar/continuar** · **4Ls** · **Veleiro** (v
 
 ---
 
-# Oficina: o quadro de vocês
-
-No GitHub Projects, agora:
-
-1. **Colunas** que refletem o trabalho real, com **políticas** na descrição
-2. **Limite** em "Em progresso" e "Em revisão" (menu da coluna)
-3. Campos de data **Início** e **Fim** para as métricas
-4. Combinar: coluna cheia → ajudar a terminar antes de puxar
-
-> O GitHub **mostra** o limite e destaca quando estoura, mas **não impede**. Respeitar é acordo.
-
-Métricas também saem dos PRs: `gh pr list --state merged --json number,createdAt,mergedAt`.
-
----
-
-# No MUSI: a primeira retrospectiva
-
-Escrita sobre dados do próprio repositório, não sobre impressões:
-
-| Fato | Número |
-|---|---|
-| Cartões no quadro, todos em "Todo" | 3, sem mudança de status em 22 dias |
-| Commits direto na `main`, sem PR | 32 de 43 (74%) |
-| Único PR | integrado em 48 min, sem revisão |
-| `main` vermelha depois de uma falha | 25,8 h |
-
-O acordo prometia limites de WIP em colunas que o quadro não tinha, e métricas dos *Insights* — que, com o quadro parado, não produzem nada. As métricas saíram do `git` e do `gh`.
-
-`processo/retrospectiva-01.md` e `processo/metricas-01.md`, em `github.com/fmarquesfilho/musi`
-
-> A causa raiz não foi falta de disciplina: o quadro estava ao lado do trabalho, não no caminho dele. Por isso a ação principal é mecânica — exigir pull request na `main`.
-
----
-
 # Entrega da Sprint 1 — 02/10, 23:59
 
 | Critério | Peso |
