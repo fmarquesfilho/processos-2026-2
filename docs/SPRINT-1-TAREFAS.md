@@ -6,7 +6,7 @@ Projects. Cada um tem um objetivo, o que fazer, e o *pronto quando* alinhado à 
 O **como** está em [SPRINT-1.md](SPRINT-1.md) e na leitura da sprint
 ([`leituras/processos-s1.md`](../leituras/processos-s1.md)) — as tarefas apontam para a seção
 certa em vez de repeti-la. Os pesos vêm de [RUBRICAS.md](RUBRICAS.md#sprint-1). Prazo em
-[CRONOGRAMA.md](CRONOGRAMA.md#visão-geral): **02/10, 23:59**.
+[CRONOGRAMA.md](CRONOGRAMA.md#visão-geral): **16/10, 23:59** (adiada; era 02/10).
 
 | # | Tarefa | Critério da rubrica |
 |---|---|---|
@@ -16,7 +16,7 @@ certa em vez de repeti-la. Os pesos vêm de [RUBRICAS.md](RUBRICAS.md#sprint-1).
 | T4 | Adotar uma prática XP com evidência | Prática XP evidenciada (20%) |
 | T5 | Registrar as métricas de fluxo | Kanban em uso real (25%) · Retrospectiva (25%) |
 | T6 | Conduzir e registrar a retrospectiva | Retrospectiva (25%) |
-| T7 | Gravar o vídeo de 5 minutos e preparar a apresentação | Comunicação |
+| T7 | Gravar o vídeo de 5 minutos | Comunicação |
 
 ---
 
@@ -114,7 +114,7 @@ certa em vez de repeti-la. Os pesos vêm de [RUBRICAS.md](RUBRICAS.md#sprint-1).
 
 ---
 
-## T7 — Gravar o vídeo de 5 minutos e preparar a apresentação
+## T7 — Gravar o vídeo de 5 minutos
 
 **Objetivo.** Mostrar o incremento e, principalmente, o processo em funcionamento.
 
@@ -122,7 +122,7 @@ certa em vez de repeti-la. Os pesos vêm de [RUBRICAS.md](RUBRICAS.md#sprint-1).
 - [ ] Seguir o roteiro do guia (incremento · quadro e métricas · prática XP · retrospectiva)
 - [ ] Garantir que **todos os integrantes falam**
 - [ ] Publicar o vídeo e linkar no `README.md`
-- [ ] Ensaiar a apresentação da coorte (28/09 online ou 30/09 em sala)
+- [ ] Mostrar o andamento na reunião online do grupo (28 ou 30/09)
 
 **Pronto quando.** O vídeo tem ~5 min, cobre o roteiro, todos falam, e está acessível pelo link.
 

@@ -45,7 +45,7 @@ O curso combina aulas presenciais expositivo-práticas com um projeto integrador
 
 ### Estrutura das sprints
 
-Uma Sprint 0 de quatro semanas, três sprints de projeto e um bloco final, com apresentações ao fim de cada sprint. Datas, conteúdo de cada aula e prazos: [CRONOGRAMA.md](CRONOGRAMA.md).
+Uma Sprint 0 de quatro semanas e duas sprints de projeto (a Sprint 2 é a entrega final), com uma *daily meeting* de cada grupo com o professor ao fim de cada sprint. Datas, conteúdo de cada aula e prazos: [CRONOGRAMA.md](CRONOGRAMA.md).
 
 
 ### Material de apoio
@@ -70,17 +70,9 @@ Introdução a processos de software. Modelos de ciclo de vida: cascata, espiral
 
 Extreme Programming: valores, práticas técnicas, design evolutivo, TDD, pair programming. Lean: sete princípios e sete desperdícios. Kanban: princípios, práticas, WIP limits, Lei de Little. Retrospectivas.
 
-### Sprint 2 — Automação da entrega
+### Sprint 2 — Automação e fluxo de valor
 
-Cultura DevOps: CALMS e os Três Caminhos. Integração e entrega contínuas com GitHub Actions. Containerização com Docker e Infrastructure as Code. Métricas DORA, framework SPACE e arquétipos de desempenho.
-
-### Sprint 3 — Fluxo de valor e qualidade
-
-Value Stream Mapping: estado atual, desperdício, lead time e cycle time, estado futuro. Controle de qualidade: revisões modernas de código, inspeções Fagan, critérios de aceite. Medição de processo. Modelos e padrões: ISO/IEC 12207, IEEE, CMMI V3.0.
-
-### Bloco final — Organização, IA e consolidação
-
-Melhoria contínua: PDCA, kaizen, implantação de processo e gestão da mudança. Governança de IA em processos. Adaptação de processos ao contexto. Apresentações finais. Topologias de Equipes: tipos de equipe, modos de interação, Lei de Conway. Engenharia de Plataformas. IA e processos de software: paradoxo da produtividade e DORA AI Capabilities Model.
+Cultura DevOps: CALMS e os Três Caminhos. Integração contínua com GitHub Actions. Containerização com Docker. Métricas DORA. Value Stream Mapping: estado atual, desperdício, tempos de processamento e de espera, eficiência de fluxo e gargalos. Melhoria contínua: a retrospectiva como instrumento.
 
 ---
 

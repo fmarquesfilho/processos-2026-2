@@ -1,6 +1,6 @@
 # Guia da Sprint 1 — DIM0510
 
-Prazo em [CRONOGRAMA.md](CRONOGRAMA.md#visão-geral): entrega em **02/10 (sexta), 23:59**, com apresentações em 28/09 (Coorte B, online) e 30/09 (Coorte A, em sala). O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-1). Os enunciados, prontos para virar cartões no quadro, estão em [SPRINT-1-TAREFAS.md](SPRINT-1-TAREFAS.md).
+Prazo em [CRONOGRAMA.md](CRONOGRAMA.md#visão-geral): entrega em **16/10 (sexta), 23:59** (adiada; era 02/10). As *daily meetings* da sprint foram as reuniões online de 28 e 30/09. O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-1). Os enunciados, prontos para virar cartões no quadro, estão em [SPRINT-1-TAREFAS.md](SPRINT-1-TAREFAS.md).
 
 A Sprint 1 é a sprint do **fluxo de trabalho**: a equipe entrega o primeiro incremento funcional e, principalmente, opera o processo que desenhou na Sprint 0 — quadro Kanban com limites de WIP, uma prática de XP de verdade, métricas de fluxo e a primeira retrospectiva com ações.
 
@@ -22,7 +22,7 @@ Além da entrega técnica, a nota da sprint tem a atividade no repositório (30%
 ## Material de apoio
 
 - Leitura da sprint: [`leituras/processos-s1.md`](../leituras/processos-s1.md) — Lean, Kanban, WIP e Lei de Little (14/09); métricas de fluxo, gestão visual e retrospectivas (21/09).
-- Slides: `slides/processos-slides-04.md` (Lean e Kanban) e `slides/processos-slides-05.md` (métricas de fluxo e retrospectivas).
+- Slides: `slides/processos-slides-04.md` (Lean e Kanban), `slides/processos-slides-05.md` (métricas de fluxo e retrospectivas) e `slides/processos-slides-06.md` (o quadro na prática, evidência de XP e a retrospectiva do MUSI).
 - O acordo de processo da Sprint 0 (`docs/proposta.md`, seção 5): é ele que esta sprint põe à prova.
 
 ---
@@ -106,4 +106,4 @@ Todos os integrantes devem falar. Link no `README.md`.
 
 - **Entrega técnica (50%)**: a rubrica da Sprint 1, sobre o estado da branch principal e do quadro no prazo.
 - **Atividade no repositório (30%)**: CI verde, commits distribuídos pelas semanas, ao menos um PR integrado por integrante, PRs revisados por outro integrante e cartões do quadro ligados a PRs. O Fator de Participação individual segue [AVALIACAO.md](AVALIACAO.md#32-fator-de-participação).
-- **Comunicação (20%)**: média entre o vídeo e a apresentação da coorte.
+- **Comunicação (20%)**: média entre o vídeo e a *daily meeting* (a reunião online de 28 ou 30/09).

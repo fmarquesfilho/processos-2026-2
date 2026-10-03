@@ -29,7 +29,7 @@ Cada informação vive em um único documento. Em caso de divergência, vale o d
 
 Equipes de 1 a 4 estudantes conduzem um projeto de software ao longo do semestre, em repositório **público** no GitHub, e são avaliadas tanto pelo produto quanto pelo processo com que o constroem. Stack tecnológico livre.
 
-O semestre é organizado em uma Sprint 0, três sprints de projeto e um bloco final, com apresentação de todos os grupos ao fim de cada sprint. Datas em [docs/CRONOGRAMA.md](docs/CRONOGRAMA.md); composição das notas em [docs/AVALIACAO.md](docs/AVALIACAO.md).
+O semestre é organizado em uma Sprint 0 e duas sprints de projeto (a Sprint 2 é a entrega final), com uma *daily meeting* de cada grupo com o professor ao fim de cada sprint. Datas em [docs/CRONOGRAMA.md](docs/CRONOGRAMA.md); composição das notas em [docs/AVALIACAO.md](docs/AVALIACAO.md).
 
 ---
 

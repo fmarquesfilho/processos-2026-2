@@ -7,6 +7,15 @@ As aulas de 10/08, 12/08 e 17/08 não foram realizadas. O curso inicia em 19/08.
 
 **Ajuste de 11/09.** Por remanejamento de aulas no início de setembro, a Sprint 0 foi estendida e sua entrega passou para **16/09** (quarta), 23:59. A Sprint 1 foi condensada em duas aulas de conteúdo (**14 e 21/09**), com encontros de acompanhamento de projeto em **16 e 23/09**. As seções abaixo já refletem o ajuste.
 
+**Ajuste de 03/10.** Para caber no que falta do semestre, o curso passa a ter **uma sprint a
+mais, e não três**: a Sprint 2, de novembro, é a entrega final. A Sprint 3 e o bloco final
+deixam de existir, e o conteúdo foi enxugado (a lista do que saiu está no fim deste documento).
+A entrega da Sprint 1 passa para **16/10** (sexta), 23:59. A prova escrita passa para **09/11**
+e a de reposição, para **02/12**. No fim de cada sprint, no lugar das apresentações, o professor faz uma *daily meeting*
+com cada grupo, online, pelo Google Meet, como as de 28 e 30/09; quem preferir conversar em
+sala pode fazê-lo na aula presencial anterior. De 05/10 em diante são 7 aulas presenciais, 7
+online e 1 a definir (30/11). As seções abaixo já refletem o ajuste, que substitui as datas dos ajustes anteriores.
+
 ---
 
 ## Legenda
@@ -14,7 +23,9 @@ As aulas de 10/08, 12/08 e 17/08 não foram realizadas. O curso inicia em 19/08.
 | Símbolo | Significado |
 |---------|-------------|
 | 🟢 | Aula presencial |
-| 🎤 | Apresentação dos grupos (presencial ou online, conforme a coorte) |
+| 🎤 | *Daily meeting* com cada grupo: online, pelo Google Meet; em sala para quem preferir |
+| ⏳ | Aula a definir: reservada, alocada conforme a demanda |
+| 🎥 | Aula em vídeo, publicada no SIGAA |
 | 🔵 | Encontro online no Google Meet — aula ou apoio ao projeto |
 | 🚀 | Entrega da sprint, às 23:59 |
 | 📚 | Prova escrita, presencial, em laboratório |
@@ -25,23 +36,21 @@ As aulas de 10/08, 12/08 e 17/08 não foram realizadas. O curso inicia em 19/08.
 
 ## Estrutura das sprints
 
-Uma Sprint 0 de quatro semanas, três sprints de projeto e um bloco final. Cada sprint tem duas ou três aulas presenciais com o conteúdo, um ou dois encontros online no horário da aula, e dois dias de apresentação na última semana — uma sessão online e uma em sala.
+Uma Sprint 0 de quatro semanas e duas sprints de projeto. A Sprint 2 é a entrega final. Cada sprint tem aulas de conteúdo no início, encontros de acompanhamento no meio e uma *daily meeting* com cada grupo na última semana.
 
-Todos os grupos apresentam em todas as sprints, exceto na Sprint 0. As regras de nota estão em [AVALIACAO.md](AVALIACAO.md).
+Todos os grupos participam da *daily meeting* em todas as sprints, exceto na Sprint 0. As regras de nota estão em [AVALIACAO.md](AVALIACAO.md).
 
 ---
 
 ## Visão geral
 
-| Bloco | Período | Tema | Apresentações | Entrega |
+| Bloco | Período | Tema | *Daily meetings* | Entrega |
 |-------|---------|------|---------------|---------|
 | Sprint 0 | 17/08 a 14/09 | Fundamentos e proposta | — | 16/09 |
-| Sprint 1 | 14/09 a 02/10 | Fluxo de trabalho | 28 e 30/09 | 02/10 |
-| Sprint 2 | 05/10 a 23/10 | Automação da entrega | 14 e 19/10 | 23/10 |
-| Sprint 3 | 26/10 a 20/11 | Fluxo de valor e qualidade | 16 e 18/11 | 20/11 |
-| Bloco final | 23/11 a 11/12 | Organização, IA e consolidação | 07 e 09/12 | 11/12 |
-| Prova escrita | 21/10 | Sprints 0 a 2 | — | — |
-| Prova de reposição | 30/11 | Sprints 0 a 3, cumulativa e opcional | — | — |
+| Sprint 1 | 14/09 a 16/10 | Fluxo de trabalho | 28 e 30/09, online | 16/10 |
+| Sprint 2 (final) | 01/11 a 30/11, com o conteúdo em 19 e 21/10 | Automação e fluxo de valor | 23 e 25/11, online | 30/11 |
+| Prova escrita | 09/11 | Sprints 0 e 1 e o conteúdo da Sprint 2 | — | — |
+| Prova de reposição | 02/12 | Sprints 0 a 2, cumulativa e opcional | — | — |
 
 ---
 
@@ -58,16 +67,30 @@ Fonte: Calendário Universitário UFRN 2026, Resolução nº 074/2025-CONSAD.
 
 ---
 
-## Apresentações
+## Daily meetings
 
-| Sprint | Coorte B — online | Coorte A — presencial |
-|--------|-------------------|------------------------|
-| Sprint 1 | 28/09 | 30/09 |
-| Sprint 2 | 19/10 | 14/10 |
-| Sprint 3 | 16/11 | 18/11 |
-| Entrega final | 07/12 | 09/12 |
+| Sprint | Online, pelo Google Meet | Em sala, para quem preferir |
+|--------|--------------------------|-----------------------------|
+| Sprint 1 | 28 e 30/09 (realizadas) | — |
+| Sprint 2 (final) | 23 e 25/11 | 18/11 |
 
-Na Sprint 2 a ordem se inverte por causa do feriado de 12/10 e da prova de 21/10. A escolha de coorte e as regras de apresentação estão em [AVALIACAO.md](AVALIACAO.md#4-componente-c--comunicação).
+No fim de cada sprint, o professor conversa com cada grupo no formato de uma *daily meeting*: uma conversa rápida, pelo Google Meet, em que o grupo mostra o que fez e o que pretende fazer até a entrega. Não é preciso preparar nada. O professor chama os grupos um a um pelo Discord, e não é preciso ficar na chamada antes da sua vez. O grupo que preferir conversar em sala avisa com antecedência e faz a sua *daily* na aula presencial de 18/11. As regras estão em [AVALIACAO.md](AVALIACAO.md#4-componente-c--comunicação).
+
+---
+
+## Aulas presenciais e online
+
+| Semana | Segunda | Quarta |
+|--------|---------|--------|
+| 05 e 07/10 | 🟢 presencial | 🟢 presencial |
+| 12 e 14/10 | 🔴 feriado | 🔵 online |
+| 19 e 21/10 | 🟢 presencial | 🟢 presencial |
+| 26 e 28/10 | 🔵 online | 🔴 feriado |
+| 02 e 04/11 | 🔴 feriado | 🔵 online |
+| 09 e 11/11 | 🟢 presencial (prova) | 🔵 online |
+| 16 e 18/11 | 🔵 online | 🟢 presencial |
+| 23 e 25/11 | 🔵 online (*daily meetings*) | 🔵 online (*daily meetings*) |
+| 30/11 e 02/12 | ⏳ a definir | 🟢 presencial (reposição) |
 
 ---
 
@@ -92,77 +115,49 @@ O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-0). Guia com
 
 ## Sprint 1 — Fluxo de trabalho
 
-**14/09 a 02/10. Entrega: 02/10 (sexta), 23:59.**
+**14/09 a 16/10. Entrega: 16/10 (sexta), 23:59.**
 
 | Data | Dia | Tipo | Atividade |
 |------|-----|------|-----------|
 | 14/09 | Seg | 🟢 | Conclui as pendências da Sprint 0 (Extreme Programming). Início da Sprint 1 — **Lean**: sete princípios e sete desperdícios. **Kanban**: princípios, práticas, WIP limits e Lei de Little |
 | 16/09 | Qua | 🔵 | Encontro online de acompanhamento de projetos. **Entrega da Sprint 0, 23:59** |
-| 21/09 | Seg | 🔵 | **Métricas de fluxo**: lead time, cycle time e throughput. Retrospectivas eficazes e gestão visual. Oficina: configuração do quadro, definição dos WIP limits e retrospectiva |
-| 23/09 | Qua | 🔵 | Encontro online de acompanhamento de projetos |
-| 28/09 | Seg | 🎤 | Apresentações da Coorte B, online |
-| 30/09 | Qua | 🎤 | Apresentações da Coorte A, em sala de aula |
-
-O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-1).
-
----
-
-## Sprint 2 — Automação da entrega
-
-**05/10 a 23/10. Entrega: 23/10 (sexta), 23:59.**
-
-A prova escrita ocorre dentro desta sprint, em 21/10. O conteúdo fica concentrado em 05 e 07/10, e as apresentações se antecipam para 14 e 19/10.
-
-| Data | Dia | Tipo | Atividade |
-|------|-----|------|-----------|
-| 05/10 | Seg | 🟢 | Cultura DevOps: CALMS e os Três Caminhos. Integração e entrega contínuas com GitHub Actions |
-| 07/10 | Qua | 🔵 | Aula online — containerização com Docker, Infrastructure as Code, métricas DORA e framework SPACE |
+| 21/09 | Seg | 🎥 | Aula em vídeo: **métricas de fluxo** (lead time, cycle time, throughput e WIP), gestão visual e retrospectivas |
+| 23/09 | Qua | 🔴 | Aula cancelada (professor doente) |
+| 28/09 | Seg | 🎤 | *Daily meetings* da Sprint 1, online pelo Google Meet: uma conversa rápida com cada grupo |
+| 30/09 | Qua | 🎤 | *Daily meetings* da Sprint 1, online pelo Google Meet |
+| 05/10 | Seg | 🟢 | Oficina do quadro no GitHub Projects (colunas, políticas, limites de WIP e datas) e evidência de prática XP |
+| 07/10 | Qua | 🟢 | Métricas de fluxo tiradas do repositório e a retrospectiva |
 | 12/10 | Seg | 🔴 | Nossa Senhora Aparecida |
-| 14/10 | Qua | 🎤 | Apresentações da Coorte A, em sala de aula |
-| 19/10 | Seg | 🎤 | Apresentações da Coorte B, online |
-| 21/10 | Qua | 📚 | **Prova escrita** — presencial, em laboratório. Conteúdo das Sprints 0 a 2 |
+| 14/10 | Qua | 🔵 | Encontro online de acompanhamento de projetos |
+| 16/10 | Sex | 🚀 | **Entrega da Sprint 1, 23:59** |
 
-O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-2).
+O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-1). Guia: [SPRINT-1.md](SPRINT-1.md).
 
 ---
 
-## Sprint 3 — Fluxo de valor e qualidade
+## Sprint 2 — Automação e fluxo de valor
 
-**26/10 a 20/11. Entrega: 20/11 (sexta), 23:59.**
+**01/11 a 30/11. Entrega final: 30/11 (segunda), 23:59.**
 
-Esta sprint tem quatro semanas por causa dos feriados de 28/10 e 02/11.
+Esta é a última sprint: o que for entregue em 30/11 é o produto final do semestre.
 
 | Data | Dia | Tipo | Atividade |
 |------|-----|------|-----------|
-| 26/10 | Seg | — | Sem encontro |
+| 19/10 | Seg | 🟢 | Cultura DevOps: CALMS e os Três Caminhos. Integração contínua com GitHub Actions, com gate em pull request. Containerização com Docker e `docker compose` |
+| 21/10 | Qua | 🟢 | Métricas DORA: o que medem e como coletar do repositório. Value Stream Mapping: estado atual, tempos de processamento e de espera, eficiência de fluxo e gargalos |
+| 26/10 | Seg | 🔵 | Encontro online de acompanhamento de projetos |
 | 28/10 | Qua | 🔴 | Dia do Servidor Público |
 | 02/11 | Seg | 🔴 | Finados |
-| 04/11 | Qua | 🔵 | Aula online — Value Stream Mapping: estado atual, desperdício, lead time e cycle time, estado futuro |
-| 09/11 | Seg | 🟢 | Oficina de VSM sobre o pipeline do próprio projeto. Identificação de gargalos sustentada por dados |
-| 11/11 | Qua | 🟢 | Controle de qualidade: revisões de código, inspeções Fagan e critérios de aceite. Medição de processo. Modelos e padrões: ISO/IEC 12207, IEEE, CMMI V3.0 |
-| 16/11 | Seg | 🎤 | Apresentações da Coorte B, online |
-| 18/11 | Qua | 🎤 | Apresentações da Coorte A, em sala de aula |
+| 04/11 | Qua | 🔵 | Encontro online: revisão para a prova e dúvidas |
+| 09/11 | Seg | 📚 | **Prova escrita** — presencial, em laboratório. Sprints 0 e 1 e o conteúdo da Sprint 2 |
+| 11/11 | Qua | 🔵 | Encontro online de acompanhamento de projetos |
+| 16/11 | Seg | 🔵 | Encontro online de acompanhamento de projetos |
+| 18/11 | Qua | 🟢 | Oficina de projeto em sala. *Daily meeting* dos grupos que preferirem o presencial |
+| 23/11 | Seg | 🎤 | *Daily meetings* da Sprint 2, online pelo Google Meet |
+| 25/11 | Qua | 🎤 | *Daily meetings* da Sprint 2, online pelo Google Meet |
+| 30/11 | Seg | ⏳ | A definir: aula reservada, a ser alocada conforme a demanda. 🚀 **Entrega final, 23:59** |
+| 02/12 | Qua | 📚 | **Prova de reposição** — presencial, em laboratório. Cumulativa, Sprints 0 a 2. Opcional |
+| 07/12 a 16/12 | — | — | Sem encontro. Divulgação das notas e do retorno escrito no SIGAA |
 
-O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-3).
-
----
-
-## Bloco final — Organização, IA e consolidação
-
-**23/11 a 11/12. Entrega final: 11/12 (sexta), 23:59.**
-
-O bloco final não tem entrega própria: o conteúdo apresentado aqui é avaliado na entrega final do projeto e na apresentação.
-
-| Data | Dia | Tipo | Atividade |
-|------|-----|------|-----------|
-| 23/11 | Seg | 🟢 | Topologias de Equipes: tipos de equipe, modos de interação, Lei de Conway. Engenharia de Plataformas |
-| 25/11 | Qua | 🔵 | Aula online — IA e processos de software: paradoxo da produtividade, DORA AI Capabilities Model, governança de IA |
-| 30/11 | Seg | 📚 | **Prova de reposição** — presencial, em laboratório. Cumulativa, Sprints 0 a 3. Opcional |
-| 02/12 | Qua | 🔵 | Aula online — melhoria contínua: PDCA, kaizen e gestão da mudança. Síntese do curso e preparação da entrega final |
-| 07/12 | Seg | 🎤 | Apresentações finais da Coorte B, online |
-| 09/12 | Qua | 🎤 | Apresentações finais da Coorte A, em sala de aula |
-| 11/12 | Sex | 🚀 | **Entrega final**, 23:59 |
-| 14/12 e 16/12 | Seg e Qua | — | Sem encontro. Divulgação das notas e do retorno escrito no SIGAA |
-
-O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#entrega-final).
+O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-2).
 

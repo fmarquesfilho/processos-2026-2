@@ -49,45 +49,19 @@ Templates, exemplos e estrutura do vídeo e da proposta: [SPRINT-0.md](SPRINT-0.
 
 ## Sprint 2
 
-| Critério | Peso | Excelente (10) | Suficiente (6) | Insuficiente (0–4) |
-|----------|------|----------------|----------------|--------------------|
-| **Pipeline de CI** | 30% | Workflow roda build + testes + lint em todo push e PR, verde em `main`, com gate impedindo merge com falha | Workflow roda build e testes, sem gate | Sem CI ou CI vermelho |
-| **Containerização** | 25% | `docker compose up` sobe o projeto inteiro do zero; imagem com build multi-estágio e sem segredos | Dockerfile funciona, compose incompleto | Sem Docker ou não executa |
-| **Métricas DORA** | 30% | As 5 métricas coletadas do próprio repositório, com **método de coleta descrito e reprodutível**, e interpretação do arquétipo do time | 3+ métricas coletadas, método vago | Métricas ausentes ou inventadas |
-| **Incremento funcional** | 15% | Segundo incremento entregue e integrado | Incremento parcial | Nada novo entregue |
-
----
-
-## Sprint 3
+Última sprint do semestre (ajuste de 03/10): substitui a Sprint 2, a Sprint 3 e a Entrega Final previstas no início do período. O que for entregue aqui é o produto final.
 
 | Critério | Peso | Excelente (10) | Suficiente (6) | Insuficiente (0–4) |
 |----------|------|----------------|----------------|--------------------|
-| **Mapeamento de Fluxo de Valor (VSM) do estado atual** | 30% | Diagrama do pipeline real com tempos de processamento e de espera medidos, e cálculo da eficiência de fluxo | Diagrama presente, tempos estimados sem base | Diagrama genérico ou ausente |
-| **Gargalos com dados** | 25% | ≥ 2 gargalos identificados, cada um sustentado por número extraído do próprio projeto | Gargalos identificados por percepção | Sem identificação de gargalos |
-| **Propostas de melhoria** | 20% | 1–2 melhorias com métrica-alvo, valor atual, valor esperado e como será verificado | Melhorias descritas sem métrica | Ausente ou genérica |
-| **Revisão de código** | 15% | ≥ 3 PRs com revisão substantiva (comentários que mudaram o código), critérios de revisão documentados | PRs aprovados sem comentários | Sem revisão |
-| **Evolução DORA** | 10% | Comparação Sprint 2 → Sprint 3 com gráfico e interpretação | Números comparados sem análise | Ausente |
-
----
-
-## Entrega Final
-
-Esta entrega absorve o conteúdo do bloco final: topologias de equipe, engenharia de plataformas, IA em processos e melhoria contínua.
-
-| Critério | Peso | Excelente (10) | Suficiente (6) | Insuficiente (0–4) |
-|----------|------|----------------|----------------|--------------------|
-| **MVP finalizado** | 20% | Todos os fluxos do MVP funcionam ponta a ponta; CI verde; README permite a terceiros rodar em menos de 10 min; licença definida | Produto roda com instruções incompletas | Não roda |
-| **Relatório final** | 25% | Narrativa da evolução do processo com evidências: VSM final, DORA com gráficos, decisões e efeitos medidos, comparação da Sprint 1 ao fim | Relatório descritivo, evidências parciais | Relatório genérico |
-| **Proposta de melhoria de processo** | 20% | Diagnóstico com dados, proposta, métrica de sucesso e plano de implantação com riscos, fundamentados em conceitos do curso | Proposta plausível, fundamentação fraca | Proposta genérica ou sem dados |
-| **Análise de topologia** | 15% | Equipe classificada nos tipos estudados, modos de interação identificados, Lei de Conway aplicada ao próprio produto | Classificação feita sem análise | Ausente |
-| **Uso crítico de IA** | 10% | `docs/uso-de-ia.md` registra ferramentas, tarefas e avaliação de impacto no processo, com evidência | Registro descritivo, sem análise | Ausente |
-| **Análise crítica e rastreabilidade** | 10% | Lições aprendidas conectadas aos conceitos do curso, reconhecendo o que não funcionou e por quê; artefatos do semestre presentes e coerentes | Lições superficiais ou artefatos inconsistentes | Ausente ou autoelogiosa |
+| **Pipeline de CI e containerização** | 25% | Workflow roda build, testes e lint em todo push e PR, verde em `main`, com gate impedindo merge com falha; `docker compose up` sobe o projeto do zero | CI sem gate, ou compose incompleto | Sem CI, CI vermelho ou sem Docker |
+| **Métricas DORA** | 20% | Ao menos 3 métricas coletadas do próprio repositório, com **método de coleta descrito e reprodutível**, e interpretação | Métricas coletadas, método vago | Métricas ausentes ou inventadas |
+| **Mapeamento de Fluxo de Valor** | 25% | Diagrama do pipeline real com tempos de processamento e de espera medidos, eficiência de fluxo calculada, ao menos 1 gargalo sustentado por número e 1 melhoria com métrica-alvo | Diagrama presente, tempos estimados sem base | Diagrama genérico ou ausente |
+| **MVP finalizado** | 15% | Fluxos do MVP funcionam ponta a ponta; README permite a terceiros rodar em menos de 10 min; licença definida | Produto roda com instruções incompletas | Não roda |
+| **Retrospectiva final** | 15% | `docs/retrospectiva-02.md` verifica as ações da retrospectiva 01 com evidência, mostra a evolução do processo da Sprint 1 ao fim com dados e avalia o uso de IA registrado em `docs/uso-de-ia.md` | Retrospectiva descritiva, sem dados | Ausente ou genérica |
 
 ---
 
 ## Rúbrica de Comunicação (Componente C, 20% de toda sprint)
-
-Aplica-se ao vídeo e, quando houver, à apresentação ao vivo.
 
 | Critério | Peso | Excelente (10) | Suficiente (6) | Insuficiente (0–4) |
 |----------|------|----------------|----------------|--------------------|
@@ -96,7 +70,7 @@ Aplica-se ao vídeo e, quando houver, à apresentação ao vivo.
 | **Evidência** | 25% | Afirmações sustentadas por dados do próprio projeto | Afirmações genéricas | Afirmações sem base |
 | **Participação da equipe** | 15% | Todos os integrantes falam sobre o que fizeram | Maioria participa | Um só fala pelo grupo |
 
-Nas apresentações, o docente pode dirigir perguntas a qualquer integrante sobre qualquer parte da entrega. A incapacidade de explicar a própria contribuição afeta o Fator de Participação individual.
+A rubrica vale para o vídeo e para a *daily meeting*, que não exige slides nem preparação: conta o que o grupo mostra e explica. Nas *daily meetings*, o docente pode dirigir perguntas a qualquer integrante sobre qualquer parte da entrega. A incapacidade de explicar a própria contribuição afeta o Fator de Participação individual.
 
 ---
 
@@ -120,27 +94,12 @@ Pode ser copiado para o `README.md` do repositório.
 - [ ] docs/retrospectiva-01.md com ações
 - [ ] Vídeo 5 min
 
-### Sprint 2
+### Sprint 2 (final)
 - [ ] CI verde (build + testes + lint) com gate em PR
-- [ ] Dockerfile + docker-compose.yml
-- [ ] docs/dora.md com as 5 métricas e método
-- [ ] Segundo incremento
+- [ ] Dockerfile + docker-compose.yml: sobe do zero
+- [ ] docs/dora.md com ≥3 métricas e o método de coleta
+- [ ] docs/vsm.md com tempos medidos, 1 gargalo com dado e 1 melhoria com métrica-alvo
+- [ ] MVP ponta a ponta; README roda em menos de 10 min
+- [ ] docs/retrospectiva-02.md verificando as ações da retrospectiva 01
 - [ ] Vídeo 5 min
-
-### Sprint 3
-- [ ] docs/vsm.md com tempos medidos
-- [ ] ≥2 gargalos com dados
-- [ ] 1–2 melhorias com métrica-alvo
-- [ ] ≥3 PRs com revisão substantiva
-- [ ] Evolução DORA S2→S3
-- [ ] Vídeo 5 min
-
-### Entrega Final
-- [ ] MVP funcional, CI verde, README completo e licença
-- [ ] docs/relatorio-final.md (≤6 pág.)
-- [ ] docs/melhoria-de-processo.md (≤4 pág.)
-- [ ] docs/topologia.md (≤1 pág.)
-- [ ] docs/uso-de-ia.md
-- [ ] Vídeo 10 min
-- [ ] Apresentação ao vivo
 ```
