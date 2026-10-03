@@ -9,7 +9,7 @@ As aulas de 10/08, 12/08 e 17/08 não foram realizadas. O curso inicia em 19/08.
 
 **Ajuste de 03/10.** Para caber no que falta do semestre, o curso passa a ter **uma sprint a
 mais, e não três**: a Sprint 2, de novembro, é a entrega final. A Sprint 3 e o bloco final
-deixam de existir, e o conteúdo foi enxugado (a lista do que saiu está no fim deste documento).
+deixam de existir, e o conteúdo foi enxugado.
 A entrega da Sprint 1 passa para **16/10** (sexta), 23:59. A prova escrita passa para **09/11**
 e a de reposição, para **02/12**. No fim de cada sprint, no lugar das apresentações, o professor faz uma *daily meeting*
 com cada grupo, online, pelo Google Meet, como as de 28 e 30/09; quem preferir conversar em
