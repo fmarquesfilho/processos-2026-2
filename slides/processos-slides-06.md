@@ -101,7 +101,6 @@ Prof. Fernando · UFRN · 2026.2
 |---|---|
 | Cronograma e slides 05 | Entrega da Sprint 1 adiada para **16/10 (sexta), 23:59** |
 | Cronograma | A aula de 23/09 foi cancelada; em 28 e 30/09, no lugar das apresentações, houve uma *daily meeting* online com cada grupo. O semestre passa a ter **só mais uma sprint**, a de novembro: ver `docs/CRONOGRAMA.md` |
-| Slides 05, "Roteiro da semana" | A oficina do quadro e da retrospectiva, prevista para a aula, é **este vídeo** |
 
 ---
 
@@ -112,14 +111,12 @@ Prof. Fernando · UFRN · 2026.2
   21/09 (vídeo)     Métricas de fluxo · gestão visual · retrospectivas
 ```
 
-Hoje, o que falta para a entrega — **na tela**, não no slide:
-
 | Bloco | O que vemos |
 |---|---|
 | O quadro | Colunas, políticas, limites de WIP, datas e o cartão ligado ao PR |
-| Prática XP | O rastro que a rubrica procura no repositório |
-| Medir pelo repositório | `git` e `gh` quando o quadro não registra |
-| Retrospectiva | A do MUSI: fatos, 5 Porquês, ações — e as ações dez dias depois |
+| Prática XP | Mineração de dados do repositório |
+| Medir pelo repositório | uso do `git` e `gh` |
+| Retrospectiva | MUSI: fatos, 5 Porquês, ações — e as ações dez dias depois |
 
 ---
 
@@ -127,7 +124,7 @@ Hoje, o que falta para a entrega — **na tela**, não no slide:
 
 | Critério | Peso | Onde o avaliador olha |
 |---|---|---|
-| Incremento funcional | 30% | a branch principal, rodando só com o `README.md` |
+| Incremento funcional | 30% | integrado na branch principal, instruções no `README.md` |
 | Kanban em uso real | 25% | o quadro: limites, políticas, histórico, cartões ligados a PRs |
 | Prática XP evidenciada | 20% | o histórico: commits, PRs, revisões, CI |
 | Retrospectiva | 25% | `docs/retrospectiva-01.md` |
@@ -140,7 +137,7 @@ Hoje, o que falta para a entrega — **na tela**, não no slide:
 
 # O quadro
 
-## Tornar o trabalho visível — e limitado
+## Tornar o trabalho visível, com WIP
 
 ---
 
@@ -160,9 +157,6 @@ Hoje, o que falta para a entrega — **na tela**, não no slide:
     aprovado por outro integrante · integrado · cartão ligado ao PR
 ```
 
-- Colunas que refletem **como o trabalho anda de fato**, não o `Todo / In Progress / Done` do modelo
-- A política encerra a discussão "isso já está pronto?"
-
 📖 **Ref.** `leituras/processos-s1.md`, capítulos 5 e 10
 
 ---
@@ -175,9 +169,8 @@ Hoje, o que falta para a entrega — **na tela**, não no slide:
 **Limite por coluna**
 
 - Menu da coluna → limite de itens
-- O GitHub mostra `2/2` no topo e **destaca** quando estoura
-- Mas **não impede**: respeitar é combinado da equipe
-- Coluna cheia → ajudar a terminar antes de puxar
+- O GitHub mostra p. ex. `2/2` no topo e **destaca** quando estoura
+- Coluna cheia → ajudar a terminar antes de puxar novas tarefas
 
 </div>
 <div class="col">
@@ -268,12 +261,9 @@ No MUSI, hoje:
 | Fato | Número |
 |---|---|
 | Cartões no quadro, todos em `Todo` | 3, sem mudança de status em 22 dias |
-| Commits direto na `main`, sem PR | 32 de 43 (74%) |
-| O único PR | integrado em 48 min, sem revisão registrada |
-| `main` vermelha depois de uma falha de CI | 25,8 h — uma ADR fora do índice |
+| Commits direto na `main`, sem PR | 32 de 43 até 19/09 (74%) |
+| O PR #1 | integrado em 48 min, sem revisão registrada |
 | Colunas e limites que o acordo declara | não existem no quadro |
-
-`processo/retrospectiva-01.md` e `processo/metricas-01.md`, em `github.com/fmarquesfilho/musi` — cada número com o comando que o produz.
 
 ---
 
@@ -285,7 +275,7 @@ No MUSI, hoje:
 4. Por que não entrou junto? — para quem tem o plano na cabeça, o quadro não devolvia informação
 5. Por que o custo vinha antes? — **o fluxo real não passa pelo quadro** em momento nenhum
 
-> **Causa raiz:** o quadro estava ao lado do trabalho, não no caminho dele. Não foi falta de disciplina — por isso a ação principal é **mecânica**.
+> **Causa raiz:** o quadro estava ao lado do trabalho, não no caminho dele. Não foi falta de disciplina — foi intencional para colocar a aplicação de pé, mas agora a ação principal é adotar um conjutno de práticas que coloquem o quadro como artefato principal para interação com o projeto.
 
 ---
 
@@ -294,12 +284,12 @@ No MUSI, hoje:
 | # | Ação | Prazo | Em 29/09 |
 |---|---|---|---|
 | A1 | Colunas do acordo, políticas, WIP 2 e 2, cartão por item ligado ao PR | 26/09 | <span class="pill-red">não feita</span> — 3 cartões ainda em `Todo` |
-| A2 | Proteger a `main`: PR e CI verde para integrar | 22/09 | <span class="pill-blue">em parte</span> — CI obrigatório, mas PR não exigido e o dono pode passar por cima |
+| A2 | Proteger a `main`: PR e CI verde para integrar | 22/09 | <span class="pill-blue">em parte</span> — CI obrigatório, mas PR não exigido |
 | A3 | `./verificar.sh` num hook de `pre-push` | 26/09 | <span class="pill-red">não feita</span> |
 
 - Cada ação tem **responsável, prazo e como verificar** — foi isso que permitiu conferir em um minuto
 - A próxima retrospectiva **começa por aqui**: por que A1 e A3 não saíram, e por que a A2 ficou pela metade?
-- Uma ação com "como verificar" pode ser conferida; uma intenção genérica ("melhorar a comunicação"), não
+- Uma ação com "como medir" pode ser conferida quantitativamente; uma intenção genérica ("melhorar a comunicação"), não
 
 ---
 
@@ -307,10 +297,8 @@ No MUSI, hoje:
 
 1. **Fatos**, com números: lead e cycle time, throughput, WIP estourado, cartões parados, PRs sem revisão
 2. **Causas**: 5 Porquês nos problemas principais
-3. **Ações**: no máximo três, com **responsável, prazo e como verificar**
+3. **Ações**: no máximo três, com **responsável, prazo e como medir**
 4. **Revisão do acordo de processo**: o que muda, e por quê
-
-> O que conta é que os números sejam **verdadeiros**. Foram os do MUSI, medidos sem ajuste, que levaram a três ações concretas.
 
 ---
 
@@ -360,8 +348,6 @@ Guia e tarefas: `docs/SPRINT-1.md` e `docs/SPRINT-1-TAREFAS.md`.
 | 23 e 25/11 | 🔵 online: *daily meetings* | 🔵 online: *daily meetings* |
 | 30/11 e 02/12 | a definir · 🚀 **entrega final** | 🟢 em sala: **prova de reposição** |
 
-> O conteúdo da Sprint 2 cabe em duas aulas porque vai ser liberado **antes, em vídeo** (aula invertida): assistam antes de 19/10.
-
 ---
 
 # A Sprint 2, a última
@@ -371,7 +357,7 @@ Guia e tarefas: `docs/SPRINT-1.md` e `docs/SPRINT-1-TAREFAS.md`.
 | Pipeline de CI com gate e containerização | 25% |
 | Métricas DORA: ≥ 3, com método de coleta reprodutível | 20% |
 | Mapeamento de fluxo de valor, com tempos medidos e 1 gargalo com dado | 25% |
-| MVP finalizado, rodando pelo README | 15% |
+| MVP finalizado, com instruções para rodar incluídas no README | 15% |
 | Retrospectiva final: as ações da retrospectiva 01 verificadas | 15% |
 
 > O que vocês entregarem em 30/11 é o produto final. A prova de 09/11 cobre as Sprints 0, 1 e 2.
