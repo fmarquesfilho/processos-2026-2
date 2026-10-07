@@ -122,7 +122,7 @@ Condições: declaração na Sprint 0; produto comum com repositórios vinculado
 
 | Prova | Data | Conteúdo |
 |-------|------|----------|
-| Prova escrita, obrigatória | 09/11 | Sprints 0, 1 e 2: modelos de ciclo de vida, Manifesto Ágil, Scrum, backlog e estimativa, XP, Lean, Kanban, métricas de fluxo, retrospectivas, DevOps, CI/CD, Docker, métricas DORA e Mapeamento de Fluxo de Valor |
+| Prova escrita, obrigatória | 11/11 | Sprints 0, 1 e 2: modelos de ciclo de vida, Manifesto Ágil, Scrum, backlog e estimativa, XP, Lean, Kanban, métricas de fluxo, retrospectivas, DevOps, CI/CD, Docker, métricas DORA e Mapeamento de Fluxo de Valor |
 | Prova de reposição, opcional | 02/12 | O mesmo conteúdo da prova escrita |
 
 Ambas são individuais, com questões fechadas, no Multiprova, presenciais, em laboratório, aplicadas no horário da aula. Permitida consulta a uma folha A4 manuscrita, frente e verso.
