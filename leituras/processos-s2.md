@@ -1,15 +1,10 @@
 # Leitura — Automação e fluxo de valor: DevOps, CI, containers, DORA e VSM (Sprint 2)
 
-Guia de apoio para as duas aulas da Sprint 2: DevOps, integração contínua e containers
-(19/10) e métricas DORA e mapeamento do fluxo de valor (21/10). Na Sprint 1, a pergunta era
-"como o trabalho flui, e onde ele trava". Nesta, é "como automatizar a entrega, e como saber,
-com números, se o processo está melhorando".
+Guia de apoio para as duas aulas da Sprint 2: DevOps, integração contínua e containers (19/10) e métricas DORA e mapeamento do fluxo de valor (21/10). Na Sprint 1, a pergunta era "como o trabalho flui, e onde ele trava". Nesta, é "como automatizar a entrega, e como saber, com números, se o processo está melhorando".
 
-Os slides das aulas são `slides/processos-slides-08.md` e `slides/processos-slides-09.md`.
-Os números do MUSI foram coletados do repositório em 15/10/2026, com os comandos mostrados.
+Os slides das aulas são `slides/processos-slides-08.md` e `slides/processos-slides-09.md`. Os números do MUSI foram coletados do repositório em 15/10/2026, com os comandos mostrados.
 
-Como ler: os capítulos 2 a 5 são de 19/10; os capítulos 6 e 7, de 21/10. O capítulo 8 junta
-tudo na entrega.
+Como ler: os capítulos 2 a 5 são de 19/10; os capítulos 6 e 7, de 21/10. O capítulo 8 junta tudo na entrega.
 
 Capítulos:
 
@@ -25,8 +20,7 @@ Capítulos:
 
 ## 1. Onde a Sprint 2 se encaixa
 
-A Sprint 2 é a última do semestre: o que for entregue em 30/11 é o produto final. Três dos
-cinco critérios da rubrica são o assunto desta leitura:
+A Sprint 2 é a última do semestre: o que for entregue em 30/11 é o produto final. Três dos cinco critérios da rubrica são o assunto desta leitura:
 
 | Critério | Peso | Capítulos |
 |---|---|---|
@@ -36,23 +30,15 @@ cinco critérios da rubrica são o assunto desta leitura:
 | MVP finalizado | 15% | — |
 | Retrospectiva final | 15% | 8 |
 
-As três partes se apoiam. O pipeline automatiza a entrega; as métricas DORA medem como a
-entrega se comporta; o mapa do fluxo mostra onde o trabalho espera antes de chegar ao
-pipeline. A retrospectiva final usa os números das três para mostrar como o processo mudou.
+As três partes se apoiam. O pipeline automatiza a entrega; as métricas DORA medem como a entrega se comporta; o mapa do fluxo mostra onde o trabalho espera antes de chegar ao pipeline. A retrospectiva final usa os números das três para mostrar como o processo mudou.
 
 ## 2. DevOps: CALMS e os Três Caminhos
 
 ### 2.1 O problema
 
-Em muitas organizações, quem escreve o código e quem o põe no ar eram equipes diferentes. O
-desenvolvimento era cobrado por entregar mudanças; a operação, por manter o sistema estável.
-Para a operação, cada mudança era um risco, e a forma de reduzir o risco era mudar pouco. O
-resultado eram entregas raras e grandes, cada uma um evento arriscado, com muitas mudanças
-juntas e difíceis de desfazer.
+Em muitas organizações, quem escreve o código e quem o põe no ar eram equipes diferentes. O desenvolvimento era cobrado por entregar mudanças; a operação, por manter o sistema estável. Para a operação, cada mudança era um risco, e a forma de reduzir o risco era mudar pouco. O resultado eram entregas raras e grandes, cada uma um evento arriscado, com muitas mudanças juntas e difíceis de desfazer.
 
-DevOps é a proposta de tratar entrega e operação como responsabilidade de uma equipe só,
-apoiada em automação e em medição. Não é um cargo nem uma ferramenta: é um conjunto de
-práticas e uma cultura.
+DevOps é a proposta de tratar entrega e operação como responsabilidade de uma equipe só, apoiada em automação e em medição. Não é um cargo nem uma ferramenta: é um conjunto de práticas e uma cultura.
 
 ### 2.2 CALMS
 
@@ -72,15 +58,9 @@ CALMS é uma forma de lembrar as cinco dimensões de uma adoção de DevOps:
 
 Os Três Caminhos, de Gene Kim, descrevem os princípios por trás das práticas de DevOps:
 
-- **Primeiro Caminho — fluxo.** O trabalho anda da esquerda (a ideia) para a direita (o
-  usuário) sem paradas: lotes pequenos, limite de WIP, integração frequente. É o que o Lean
-  e o Kanban trabalharam na Sprint 1.
-- **Segundo Caminho — feedback.** A informação volta da direita para a esquerda, rápido:
-  testes automatizados, monitoramento, revisão. Um problema descoberto minutos depois da
-  mudança é barato de corrigir; descoberto semanas depois, é caro.
-- **Terceiro Caminho — aprendizado contínuo.** Experimentar, errar e aprender com o erro,
-  todo dia; reservar tempo para melhorar o próprio processo. É o papel da retrospectiva e das
-  ações com dono, prazo e verificação.
+- **Primeiro Caminho — fluxo.** O trabalho anda da esquerda (a ideia) para a direita (o usuário) sem paradas: lotes pequenos, limite de WIP, integração frequente. É o que o Lean e o Kanban trabalharam na Sprint 1.
+- **Segundo Caminho — feedback.** A informação volta da direita para a esquerda, rápido: testes automatizados, monitoramento, revisão. Um problema descoberto minutos depois da mudança é barato de corrigir; descoberto semanas depois, é caro.
+- **Terceiro Caminho — aprendizado contínuo.** Experimentar, errar e aprender com o erro, todo dia; reservar tempo para melhorar o próprio processo. É o papel da retrospectiva e das ações com dono, prazo e verificação.
 
 📖 Ref. IT Revolution — The Three Ways: <https://itrevolution.com/articles/the-three-ways-principles-underpinning-devops/>
 
@@ -88,13 +68,9 @@ Os Três Caminhos, de Gene Kim, descrevem os princípios por trás das práticas
 
 ### 3.1 O que é
 
-Integração contínua é a prática de cada integrante integrar o seu trabalho à linha principal
-(a `main`) com frequência, pelo menos uma vez por dia, com cada integração verificada por um
-build automatizado que inclui os testes.
+Integração contínua é a prática de cada integrante integrar o seu trabalho à linha principal (a `main`) com frequência, pelo menos uma vez por dia, com cada integração verificada por um build automatizado que inclui os testes.
 
-As duas partes importam. Integrar com frequência sem verificar só espalha problemas mais
-depressa. Verificar sem integrar com frequência deixa os ramos divergirem por dias, e a
-integração volta a ser um evento difícil, perto da entrega.
+As duas partes importam. Integrar com frequência sem verificar só espalha problemas mais depressa. Verificar sem integrar com frequência deixa os ramos divergirem por dias, e a integração volta a ser um evento difícil, perto da entrega.
 
 | Sem integração contínua | Com integração contínua |
 |---|---|
@@ -104,6 +80,7 @@ integração volta a ser um evento difícil, perto da entrega.
 | o problema aparece semanas depois | o problema aparece minutos depois do push |
 
 📖 Ref. Martin Fowler — Continuous Integration: <https://martinfowler.com/articles/continuousIntegration.html>
+
 📖 Ref. DORA — Continuous integration: <https://dora.dev/capabilities/continuous-integration/>
 
 ### 3.2 O que o CI deve rodar
@@ -118,11 +95,8 @@ A rubrica pede build, testes e lint, em todo push e em todo pull request:
 
 Duas qualidades fazem o CI ser útil, e não um obstáculo:
 
-- **Rápido.** O CI é feedback. Se demora meia hora, a equipe para de esperar por ele e
-  integra mesmo assim. Minutos é o tempo certo.
-- **Igual à máquina de quem desenvolve.** Os comandos do CI são os mesmos que o grupo roda
-  localmente (`make test`, `./gradlew test`, `mise run test`). Um passo que só o CI conhece
-  vira uma falha que ninguém consegue reproduzir.
+- **Rápido.** O CI é feedback. Se demora meia hora, a equipe para de esperar por ele e integra mesmo assim. Minutos é o tempo certo.
+- **Igual à máquina de quem desenvolve.** Os comandos do CI são os mesmos que o grupo roda localmente (`make test`, `./gradlew test`, `mise run test`). Um passo que só o CI conhece vira uma falha que ninguém consegue reproduzir.
 
 ### 3.3 Anatomia de um workflow do GitHub Actions
 
@@ -144,12 +118,9 @@ jobs:
       - run: make test                # se um comando falha, o job fica vermelho
 ```
 
-- `on` define os eventos. `pull_request` faz o CI rodar no PR, antes do merge, que é quando
-  ele mais ajuda.
-- Cada `job` roda numa máquina nova. Os `steps` rodam em sequência; um que falha interrompe
-  o job.
-- `uses` reaproveita uma ação publicada (baixar o código, instalar uma linguagem); `run`
-  executa um comando de terminal.
+- `on` define os eventos. `pull_request` faz o CI rodar no PR, antes do merge, que é quando ele mais ajuda.
+- Cada `job` roda numa máquina nova. Os `steps` rodam em sequência; um que falha interrompe o job.
+- `uses` reaproveita uma ação publicada (baixar o código, instalar uma linguagem); `run` executa um comando de terminal.
 
 📖 Ref. GitHub Actions — Quickstart: <https://docs.github.com/en/actions/get-started/quickstart>
 
@@ -157,9 +128,7 @@ jobs:
 
 ### 4.1 Por que o CI sozinho não basta
 
-Um CI que só avisa não impede nada: um PR vermelho continua com o botão de merge
-disponível, e um push direto na `main` nem passa por PR. O portão (*gate*) é a regra de
-proteção da branch, que transforma o aviso em bloqueio.
+Um CI que só avisa não impede nada: um PR vermelho continua com o botão de merge disponível, e um push direto na `main` nem passa por PR. O portão (*gate*) é a regra de proteção da branch, que transforma o aviso em bloqueio.
 
 | Regra | Efeito |
 |---|---|
@@ -168,9 +137,7 @@ proteção da branch, que transforma o aviso em bloqueio.
 | Exigir revisão aprovada (opcional) | outra pessoa precisa aprovar o PR |
 | Incluir administradores | a regra vale para todos, inclusive para quem é dono do repositório |
 
-No GitHub, a configuração fica em *Settings → Branches* (proteção clássica) ou em
-*Settings → Rules → Rulesets*. O status check exigido é escolhido pelo nome do job do
-workflow, e só aparece na lista depois de o workflow ter rodado pelo menos uma vez.
+No GitHub, a configuração fica em *Settings → Branches* (proteção clássica) ou em *Settings → Rules → Rulesets*. O status check exigido é escolhido pelo nome do job do workflow, e só aparece na lista depois de o workflow ter rodado pelo menos uma vez.
 
 📖 Ref. GitHub — About protected branches: <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches>
 
@@ -185,16 +152,14 @@ gh api repos/fmarquesfilho/musi/branches/main/protection \
 {"admins":false,"checks":["ci"],"pr":false}
 ```
 
-No MUSI, o CI é obrigatório, mas o PR não, e o dono do repositório pode passar por cima. É
-a ação A2 da retrospectiva da Sprint 1, cumprida em parte.
+No MUSI, o CI é obrigatório, mas o PR não, e o dono do repositório pode passar por cima. É a ação A2 da retrospectiva da Sprint 1, cumprida em parte.
 
 ### 4.3 Provar que o portão funciona
 
 A rubrica pede um portão "impedindo merge com falha". A forma de mostrar é testá-lo:
 
 1. Num ramo, quebrar um teste de propósito e abrir um PR.
-2. Ver o check do CI ficar vermelho e o merge bloqueado, com a mensagem de que o status
-   check exigido não passou.
+2. Ver o check do CI ficar vermelho e o merge bloqueado, com a mensagem de que o status check exigido não passou.
 3. Corrigir, fazer push no mesmo ramo, e ver o check rodar de novo e ficar verde.
 
 ```bash
@@ -203,18 +168,13 @@ gh run list --limit 5     # as últimas execuções
 gh run view --log-failed  # só o log do passo que falhou
 ```
 
-Armadilhas comuns: o workflow não roda em `pull_request` (e o check nunca aparece no PR); o
-nome do job mudou e a regra continua exigindo o nome antigo; os administradores ficaram
-fora da regra.
+Armadilhas comuns: o workflow não roda em `pull_request` (e o check nunca aparece no PR); o nome do job mudou e a regra continua exigindo o nome antigo; os administradores ficaram fora da regra.
 
 ## 5. Containers e `docker compose`
 
 ### 5.1 O problema que resolvem
 
-Um projeto que roda numa máquina e não roda em outra, por diferença de versão da linguagem,
-do banco ou de uma biblioteca do sistema, é um caso de "na minha máquina funciona". Um
-container empacota o programa com tudo de que ele precisa para rodar, e roda do mesmo jeito
-em qualquer máquina com Docker.
+Um projeto que roda numa máquina e não roda em outra, por diferença de versão da linguagem, do banco ou de uma biblioteca do sistema, é um caso de "na minha máquina funciona". Um container empacota o programa com tudo de que ele precisa para rodar, e roda do mesmo jeito em qualquer máquina com Docker.
 
 | Termo | O que é |
 |---|---|
@@ -234,8 +194,7 @@ CMD ["/app/bin/app"]                   # o comando que roda quando o container i
 
 ### 5.2 O sistema inteiro com um comando
 
-Um sistema real tem mais de um processo: a aplicação, o banco, às vezes outros serviços. O
-`docker compose` descreve todos num arquivo e sobe tudo com um comando:
+Um sistema real tem mais de um processo: a aplicação, o banco, às vezes outros serviços. O `docker compose` descreve todos num arquivo e sobe tudo com um comando:
 
 ```yaml
 services:
@@ -252,15 +211,11 @@ services:
       banco: { condition: service_healthy }           # a API só sobe com o banco pronto
 ```
 
-- Cada serviço vira um container, e todos ficam numa rede própria, onde o nome do serviço
-  é o endereço (`banco:5432`).
-- O `healthcheck` diz como saber se o serviço está pronto; o `depends_on` com
-  `service_healthy` faz a ordem de subida respeitar isso.
-- "Do zero" quer dizer numa máquina que só tem Docker: sem a linguagem instalada, sem banco
-  configurado à mão, sem passos manuais.
+- Cada serviço vira um container, e todos ficam numa rede própria, onde o nome do serviço é o endereço (`banco:5432`).
+- O `healthcheck` diz como saber se o serviço está pronto; o `depends_on` com `service_healthy` faz a ordem de subida respeitar isso.
+- "Do zero" quer dizer numa máquina que só tem Docker: sem a linguagem instalada, sem banco configurado à mão, sem passos manuais.
 
-O exemplo de Tarefas de Web II (`web2-2026-2/exemplos/compose.yaml`) sobe banco, um serviço
-em Go e a API com `docker compose up --build`.
+O exemplo de Tarefas de Web II (`web2-2026-2/exemplos/compose.yaml`) sobe banco, um serviço em Go e a API com `docker compose up --build`.
 
 📖 Ref. Docker Compose: <https://docs.docker.com/compose/>
 
@@ -276,14 +231,9 @@ em Go e a API com `docker compose up --build`.
 
 ### 6.1 Por que medir a entrega
 
-O programa de pesquisa DORA (DevOps Research and Assessment) estuda há mais de uma década o
-desempenho de entrega de software de milhares de equipes. O resultado central contraria a
-intuição: velocidade e estabilidade não competem. Equipes que entregam com mais frequência
-também tendem a falhar menos e a se recuperar mais rápido, porque entregam em lotes pequenos,
-mais fáceis de testar, revisar e desfazer.
+O programa de pesquisa DORA (DevOps Research and Assessment) estuda há mais de uma década o desempenho de entrega de software de milhares de equipes. O resultado central contraria a intuição: velocidade e estabilidade não competem. Equipes que entregam com mais frequência também tendem a falhar menos e a se recuperar mais rápido, porque entregam em lotes pequenos, mais fáceis de testar, revisar e desfazer.
 
-Por isso as métricas vêm em dois grupos, vazão e instabilidade, e uma equipe olha os dois
-ao mesmo tempo.
+Por isso as métricas vêm em dois grupos, vazão e instabilidade, e uma equipe olha os dois ao mesmo tempo.
 
 ### 6.2 As cinco métricas
 
@@ -295,15 +245,13 @@ ao mesmo tempo.
 | Instabilidade | Taxa de falha de mudança (*change fail rate*) | fração das implantações que exigiram intervenção imediata, como reverter ou corrigir às pressas |
 | Instabilidade | Taxa de retrabalho (*deployment rework rate*) | fração das implantações não planejadas, feitas por causa de um incidente em produção |
 
-A rubrica pede ao menos três, com o método de coleta descrito e reprodutível, e a
-interpretação.
+A rubrica pede ao menos três, com o método de coleta descrito e reprodutível, e a interpretação.
 
 📖 Ref. DORA — Software delivery performance metrics: <https://dora.dev/guides/dora-metrics/>
 
 ### 6.3 Primeiro, o que é uma implantação
 
-Nenhuma das cinco métricas tem número sem uma definição de implantação. Cada grupo escolhe
-a sua, conforme o projeto, e a escreve:
+Nenhuma das cinco métricas tem número sem uma definição de implantação. Cada grupo escolhe a sua, conforme o projeto, e a escreve:
 
 | Se o projeto... | Uma implantação é |
 |---|---|
@@ -312,8 +260,7 @@ a sua, conforme o projeto, e a escreve:
 | gera releases ou tags | cada release ou tag |
 | ainda não está no ar | cada merge na `main` com o CI verde (e o documento diz isso) |
 
-O método começa por uma frase: "Neste projeto, uma implantação é ___, e a contamos com o
-comando ___."
+O método começa por uma frase: "Neste projeto, uma implantação é ___, e a contamos com o comando ___."
 
 ### 6.4 Coletar do repositório
 
@@ -341,13 +288,11 @@ git log origin/main --format=%ad --date=format:%G-W%V | sort | uniq -c
 | Tempo de recuperação | da execução vermelha na `main` à próxima verde | só para falhas que o CI detecta |
 | Taxa de retrabalho | implantações marcadas como correção de incidente | exige registrar o motivo de cada implantação |
 
-Um método reprodutível é aquele que outra pessoa consegue repetir e chegar ao mesmo número:
-a definição de implantação, os comandos exatos, o período e o que foi descartado.
+Um método reprodutível é aquele que outra pessoa consegue repetir e chegar ao mesmo número: a definição de implantação, os comandos exatos, o período e o que foi descartado.
 
 ### 6.5 Um exemplo: o MUSI
 
-No MUSI, cada push na `main` dispara uma nova versão no Render, então uma implantação é um
-push na `main`, contado pelas execuções do CI. Período: 26/08 a 04/10/2026.
+No MUSI, cada push na `main` dispara uma nova versão no Render, então uma implantação é um push na `main`, contado pelas execuções do CI. Período: 26/08 a 04/10/2026.
 
 | Métrica | Valor | Cálculo |
 |---|---|---|
@@ -358,37 +303,24 @@ push na `main`, contado pelas execuções do CI. Período: 26/08 a 04/10/2026.
 
 A interpretação é a parte que dá sentido aos números:
 
-- **A média esconde o padrão.** Três implantações por semana, em média, descreveria mal o
-  projeto: houve uma semana intensa de montagem e, depois, quase nada. Mostrar a distribuição
-  por semana diz mais que a média.
-- **As falhas se concentram no início.** Três das quatro foram na primeira semana, quando o
-  próprio CI estava sendo montado.
-- **Tempo de espera curto não é necessariamente bom.** Os dois PRs foram integrados em menos
-  de uma hora porque não tiveram revisão. O número melhora quando se pula uma etapa.
-- **Uma recuperação de 26 horas** mostra que a falha atravessou a noite sem ninguém olhando.
-  Não é um problema técnico: é a ausência de alguém responsável por manter a `main` verde.
+- **A média esconde o padrão.** Três implantações por semana, em média, descreveria mal o projeto: houve uma semana intensa de montagem e, depois, quase nada. Mostrar a distribuição por semana diz mais que a média.
+- **As falhas se concentram no início.** Três das quatro foram na primeira semana, quando o próprio CI estava sendo montado.
+- **Tempo de espera curto não é necessariamente bom.** Os dois PRs foram integrados em menos de uma hora porque não tiveram revisão. O número melhora quando se pula uma etapa.
+- **Uma recuperação de 26 horas** mostra que a falha atravessou a noite sem ninguém olhando. Não é um problema técnico: é a ausência de alguém responsável por manter a `main` verde.
 
 ### 6.6 Cuidados
 
-- **Medir o sistema, não as pessoas.** As métricas descrevem como o processo entrega.
-  Usadas para avaliar indivíduos, deixam de ser confiáveis.
-- **Não comparar equipes.** Produtos, tamanhos e tecnologias diferentes tornam a comparação
-  enganosa. A comparação útil é da equipe com ela mesma, ao longo do tempo.
-- **Não transformar em meta.** Quando um número vira meta, a equipe aprende a mexer no
-  número (lei de Goodhart): PRs vazios aumentam a frequência sem entregar nada.
-- **Olhar a tendência.** O valor de uma semana diz pouco; a mudança ao longo da sprint diz
-  mais.
-- **Sempre com o método.** Um número sem "como foi obtido" não pode ser conferido, e não
-  conta na rubrica.
+- **Medir o sistema, não as pessoas.** As métricas descrevem como o processo entrega. Usadas para avaliar indivíduos, deixam de ser confiáveis.
+- **Não comparar equipes.** Produtos, tamanhos e tecnologias diferentes tornam a comparação enganosa. A comparação útil é da equipe com ela mesma, ao longo do tempo.
+- **Não transformar em meta.** Quando um número vira meta, a equipe aprende a mexer no número (lei de Goodhart): PRs vazios aumentam a frequência sem entregar nada.
+- **Olhar a tendência.** O valor de uma semana diz pouco; a mudança ao longo da sprint diz mais.
+- **Sempre com o método.** Um número sem "como foi obtido" não pode ser conferido, e não conta na rubrica.
 
 ## 7. Mapeamento do fluxo de valor
 
 ### 7.1 O que é
 
-O mapeamento do fluxo de valor (*value stream mapping*, VSM) vem do Lean. Consiste em
-desenhar o caminho que um pedido percorre, da ideia até chegar ao usuário, e medir quanto
-tempo ele passa em cada etapa, separando o tempo em que alguém trabalha nele do tempo em que
-ele espera.
+O mapeamento do fluxo de valor (*value stream mapping*, VSM) vem do Lean. Consiste em desenhar o caminho que um pedido percorre, da ideia até chegar ao usuário, e medir quanto tempo ele passa em cada etapa, separando o tempo em que alguém trabalha nele do tempo em que ele espera.
 
 | Termo | O que é |
 |---|---|
@@ -398,8 +330,7 @@ ele espera.
 | Eficiência de fluxo | tempo de processamento total ÷ lead time × 100 |
 | Gargalo | a etapa que limita o fluxo inteiro: onde o trabalho mais se acumula ou espera |
 
-O mapa mostra o que o quadro esconde. Um cartão em "Em revisão" pode estar sendo revisado
-ou pode estar parado há dois dias; no quadro, os dois casos parecem iguais.
+O mapa mostra o que o quadro esconde. Um cartão em "Em revisão" pode estar sendo revisado ou pode estar parado há dois dias; no quadro, os dois casos parecem iguais.
 
 📖 Ref. Lean Enterprise Institute — Value-stream mapping: <https://www.lean.org/lexicon-terms/value-stream-mapping/>
 
@@ -424,10 +355,8 @@ Uma história de usuário de um projeto da disciplina (exemplo ilustrativo):
 Leitura do mapa:
 
 - Em 8 dias, o item recebeu cerca de 6,5 horas de trabalho. O resto foi espera.
-- O maior tempo parado, depois de começado, foi entre o CI verde e o merge: 2 dias, sem
-  ninguém responsável por integrar. Esse é o gargalo, sustentado por número.
-- Trabalhar mais rápido na etapa "Em progresso" mudaria pouco o lead time. Reduzir as
-  esperas muda muito.
+- O maior tempo parado, depois de começado, foi entre o CI verde e o merge: 2 dias, sem ninguém responsável por integrar. Esse é o gargalo, sustentado por número.
+- Trabalhar mais rápido na etapa "Em progresso" mudaria pouco o lead time. Reduzir as esperas muda muito.
 
 ### 7.3 De onde vêm os tempos
 
@@ -444,9 +373,7 @@ gh pr list --state merged --json number,createdAt,mergedAt,reviews \
   --jq '.[] | {pr: .number, aberto: .createdAt, primeira_revisao: (.reviews[0].submittedAt // "nenhuma"), merge: .mergedAt}'
 ```
 
-Os tempos de espera são os mais fáceis de medir: as datas já estão no GitHub e no quadro.
-O tempo de processamento é o mais difícil: quase sempre é preciso perguntar a quem fez.
-Quando for estimado, o documento diz que é estimado, e como.
+Os tempos de espera são os mais fáceis de medir: as datas já estão no GitHub e no quadro. O tempo de processamento é o mais difícil: quase sempre é preciso perguntar a quem fez. Quando for estimado, o documento diz que é estimado, e como.
 
 ### 7.4 Do gargalo à melhoria
 
@@ -475,8 +402,7 @@ A rubrica pede um gargalo sustentado por número e uma melhoria com métrica-alv
 
 ### 8.2 Comece a medir já
 
-As métricas e o mapa precisam de histórico, e o histórico de novembro começa agora. O que
-registrar desde o primeiro dia da sprint:
+As métricas e o mapa precisam de histórico, e o histórico de novembro começa agora. O que registrar desde o primeiro dia da sprint:
 
 - cada PR aberto, revisado e integrado (o GitHub registra sozinho);
 - cada execução do CI (idem);
@@ -488,45 +414,26 @@ registrar desde o primeiro dia da sprint:
 
 ### Exercícios
 
-1. Escreva o workflow mínimo do projeto do grupo, com build, testes e lint, rodando em push
-   na `main` e em pull request.
-2. Proteja a `main` do repositório do grupo e prove que o portão funciona, com um PR que
-   quebra um teste.
-3. Escreva a definição de implantação do projeto e os comandos que contam as implantações
-   da última semana.
-4. Calcule, para os PRs da Sprint 1 do grupo, o tempo da abertura ao merge. Qual é a
-   mediana? Algum PR destoa? Por quê?
-5. Um item teve 4 h de trabalho e lead time de 5 dias corridos. Qual é a eficiência de
-   fluxo, contando 24 h por dia? E contando 8 h úteis por dia? Qual das duas o grupo vai
-   usar, e por quê?
-6. Escolha três cartões concluídos e desenhe o mapa do fluxo de cada um, com a fonte de
-   cada tempo.
+1. Escreva o workflow mínimo do projeto do grupo, com build, testes e lint, rodando em push na `main` e em pull request.
+2. Proteja a `main` do repositório do grupo e prove que o portão funciona, com um PR que quebra um teste.
+3. Escreva a definição de implantação do projeto e os comandos que contam as implantações da última semana.
+4. Calcule, para os PRs da Sprint 1 do grupo, o tempo da abertura ao merge. Qual é a mediana? Algum PR destoa? Por quê?
+5. Um item teve 4 h de trabalho e lead time de 5 dias corridos. Qual é a eficiência de fluxo, contando 24 h por dia? E contando 8 h úteis por dia? Qual das duas o grupo vai usar, e por quê?
+6. Escolha três cartões concluídos e desenhe o mapa do fluxo de cada um, com a fonte de cada tempo.
 
-Respostas do exercício 5: com 24 h por dia, o lead time é 120 h, e a eficiência é
-4 ÷ 120 ≈ 3,3%. Com 8 h por dia, o lead time é 40 h, e a eficiência é 4 ÷ 40 = 10%. As duas
-formas são aceitáveis, desde que o documento diga qual foi usada e use a mesma em todos os
-itens.
+Respostas do exercício 5: com 24 h por dia, o lead time é 120 h, e a eficiência é 4 ÷ 120 ≈ 3,3%. Com 8 h por dia, o lead time é 40 h, e a eficiência é 4 ÷ 40 = 10%. As duas formas são aceitáveis, desde que o documento diga qual foi usada e use a mesma em todos os itens.
 
 ### Dúvidas frequentes
 
-**Nosso projeto ainda não está no ar. Como medir a frequência de implantação?** Definam
-implantação como merge na `main` com o CI verde e digam isso no documento. A métrica passa a
-medir a frequência de integração, que é o que o projeto tem.
+**Nosso projeto ainda não está no ar. Como medir a frequência de implantação?** Definam implantação como merge na `main` com o CI verde e digam isso no documento. A métrica passa a medir a frequência de integração, que é o que o projeto tem.
 
-**Podemos usar uma ferramenta que calcula as métricas sozinha?** Podem, desde que o método
-esteja descrito: qual ferramenta, com qual configuração, sobre qual período. A rubrica cobra
-um método que outra pessoa consiga repetir.
+**Podemos usar uma ferramenta que calcula as métricas sozinha?** Podem, desde que o método esteja descrito: qual ferramenta, com qual configuração, sobre qual período. A rubrica cobra um método que outra pessoa consiga repetir.
 
-**O CI precisa rodar testes de todos os componentes?** Precisa rodar os testes que o projeto
-tem, em todo push e PR. Se o projeto tem mais de um componente, o CI cobre todos.
+**O CI precisa rodar testes de todos os componentes?** Precisa rodar os testes que o projeto tem, em todo push e PR. Se o projeto tem mais de um componente, o CI cobre todos.
 
-**Um item que voltou de "Em revisão" para "Em progresso" entra no mapa?** Entra, e é
-informação valiosa: o retrabalho aparece como uma volta no fluxo. Contem as voltas e o tempo
-gasto nelas.
+**Um item que voltou de "Em revisão" para "Em progresso" entra no mapa?** Entra, e é informação valiosa: o retrabalho aparece como uma volta no fluxo. Contem as voltas e o tempo gasto nelas.
 
-**Qual é uma eficiência de fluxo boa?** Não há um número certo. Em trabalho de software, é
-comum a espera dominar o lead time. O que importa é o grupo entender onde está a espera e
-mostrar a mudança depois da melhoria.
+**Qual é uma eficiência de fluxo boa?** Não há um número certo. Em trabalho de software, é comum a espera dominar o lead time. O que importa é o grupo entender onde está a espera e mostrar a mudança depois da melhoria.
 
 ## Referências
 

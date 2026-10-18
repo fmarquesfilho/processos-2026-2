@@ -1,12 +1,8 @@
 # Tarefas da Sprint 2 — DIM0510
 
-Estes são os enunciados das tarefas da Sprint 2, prontos para virar cartões no GitHub
-Projects. Cada um tem um objetivo, o que fazer, e o *pronto quando* alinhado à rubrica.
+Estes são os enunciados das tarefas da Sprint 2, prontos para virar cartões no GitHub Projects. Cada um tem um objetivo, o que fazer, e o *pronto quando* alinhado à rubrica.
 
-O **como** está em [SPRINT-2.md](SPRINT-2.md) e na leitura da sprint
-([`leituras/processos-s2.md`](../leituras/processos-s2.md)): as tarefas apontam para a seção
-certa em vez de repeti-la. Os pesos vêm de [RUBRICAS.md](RUBRICAS.md#sprint-2). Prazo em
-[CRONOGRAMA.md](CRONOGRAMA.md#visão-geral): **30/11, 23:59**.
+O **como** está em [SPRINT-2.md](SPRINT-2.md) e na leitura da sprint ([`leituras/processos-s2.md`](../leituras/processos-s2.md)): as tarefas apontam para a seção certa em vez de repeti-la. Os pesos vêm de [RUBRICAS.md](RUBRICAS.md#sprint-2). Prazo em [CRONOGRAMA.md](CRONOGRAMA.md#visão-geral): **30/11, 23:59**.
 
 | # | Tarefa | Critério da rubrica |
 |---|---|---|

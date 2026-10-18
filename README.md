@@ -1,9 +1,6 @@
 # DIM0510 — Processos de Software
 
-**Bacharelado em Engenharia de Software — UFRN/DIMAp**
-**Período letivo 2026.2 — 17/08/2026 a 19/12/2026**
-**Turma 01 · Segundas e quartas, 10:50 às 12:30 (24M56)**
-**Docente**: Fernando Figueira Filho — fernando.figueira@ufrn.br
+**Bacharelado em Engenharia de Software — UFRN/DIMAp** **Período letivo 2026.2 — 17/08/2026 a 19/12/2026** **Turma 01 · Segundas e quartas, 10:50 às 12:30 (24M56)** **Docente**: Fernando Figueira Filho — fernando.figueira@ufrn.br
 
 As aulas de 10/08, 12/08 e 17/08 não foram realizadas. O curso inicia em 19/08.
 
