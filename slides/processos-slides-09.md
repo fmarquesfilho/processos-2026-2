@@ -200,6 +200,38 @@ Interpretação:
 
 ---
 
+# O que move cada métrica
+
+| Métrica | Práticas que a melhoram |
+|---|---|
+| Tempo de espera da mudança | PRs pequenos; revisão no mesmo dia; CI rápido; menos etapas manuais |
+| Frequência de implantação | implantação automática; integrar na `main` todo dia; lotes pequenos |
+| Taxa de falha de mudança | testes no CI; portão na `main`; revisão; mudanças pequenas, fáceis de entender |
+| Tempo de recuperação | alguém olhando o CI vermelho; reverter com um comando; logs e monitoramento |
+
+- Quase todas passam por **lotes pequenos**: é o Primeiro Caminho de segunda-feira
+- A métrica não se melhora diretamente: melhora-se a prática, e a métrica mostra se funcionou
+
+---
+
+# Como registrar as métricas
+
+Uma tabela por métrica, no `docs/` do grupo:
+
+| Campo | Exemplo |
+|---|---|
+| Métrica | frequência de implantação |
+| Definição usada | uma implantação é um push na `main` com o CI verde |
+| Período | 01/11 a 28/11 |
+| Comando ou fonte | `gh run list --branch main --workflow ci.yml --json createdAt,conclusion` |
+| Valor | 14 implantações em 4 semanas (3, 5, 2, 4 por semana) |
+| Interpretação | a semana 3 caiu por causa da prova; a tendência se manteve |
+
+- Outra pessoa, com o mesmo comando e o mesmo período, deve chegar ao mesmo número: é o "reprodutível" da rubrica
+- Valor com distribuição (por semana), e não só a média
+
+---
+
 # Cuidados com as métricas
 
 - **Medir o sistema, não as pessoas.** As métricas descrevem como o processo entrega, e não quem trabalha mais
@@ -227,6 +259,28 @@ Vem do Lean: desenhar o caminho de um pedido, da ideia até o usuário, e medir 
 > O mapa mostra o que o quadro esconde: um cartão "em revisão" pode estar parado, sem ninguém revisando.
 
 📖 **Ref.** [Lean Enterprise Institute — Value-stream mapping](https://www.lean.org/lexicon-terms/value-stream-mapping/)
+
+---
+
+# Como desenhar o mapa
+
+```
+ Backlog ──► Em progresso ──► Em revisão ──► CI ──► ...
+
+ espera         3 dias                1 dia
+            ________________        ___________
+                            |______|           |_______ ...
+ processamento                6 h                20 min
+```
+
+| Elemento | No desenho |
+|---|---|
+| etapa | uma caixa com o nome que a equipe usa |
+| fila entre etapas | a seta entre duas etapas: é onde o item espera |
+| linha do tempo | embaixo, em degraus: em cima as esperas, embaixo os tempos de processamento |
+| totais | no fim da linha: soma das esperas, soma do processamento, lead time |
+
+- Papel, quadro branco ou uma ferramenta de desenho: o que importa são as etapas reais e os números
 
 ---
 
@@ -273,6 +327,23 @@ gh pr list --state merged --json number,createdAt,mergedAt,reviews \
 
 ---
 
+# Lei de Little, de novo
+
+Da Sprint 1 (Kanban):
+
+> **lead time médio = itens em andamento (WIP) ÷ vazão**
+
+| Situação do grupo | Lead time médio |
+|---|---|
+| 8 cartões em andamento, 2 concluídos por semana | 8 ÷ 2 = **4 semanas** |
+| 4 cartões em andamento, 2 concluídos por semana | 4 ÷ 2 = **2 semanas** |
+
+- Com a mesma equipe e a mesma vazão, começar menos coisas encurta a espera de cada uma
+- No mapa, o WIP alto aparece como espera: cartões começados e parados
+- Limitar o WIP é uma melhoria candidata quando o gargalo é "muita coisa ao mesmo tempo"
+
+---
+
 # Do gargalo à melhoria
 
 A rubrica pede **um gargalo sustentado por número** e **uma melhoria com métrica-alvo**:
@@ -286,6 +357,19 @@ A rubrica pede **um gargalo sustentado por número** e **uma melhoria com métri
 - A melhoria é uma mudança no processo, com dono, e não um pedido de esforço
 - A métrica-alvo é a mesma que mostrou o gargalo: assim dá para saber se melhorou
 - É a mesma estrutura das ações da retrospectiva: responsável, prazo e como verificar
+
+---
+
+# Erros comuns no mapeamento
+
+| Erro | Por que é um problema |
+|---|---|
+| mapear o processo como deveria ser | o mapa serve para ver o que acontece de fato, inclusive o que ninguém gosta de admitir |
+| anotar só o tempo de trabalho | a espera é quase todo o lead time; sem ela, a eficiência parece ótima |
+| um cartão só | um caso pode ser exceção; com três ou mais, aparece o padrão |
+| esquecer etapas fora do quadro | esperar o cliente, a implantação manual, a aprovação do professor |
+| apontar uma pessoa como gargalo | o gargalo é uma etapa do processo, e a melhoria muda o processo |
+| melhoria sem métrica-alvo | não há como saber, depois, se funcionou |
 
 ---
 
@@ -312,6 +396,16 @@ Ao final, cada grupo diz: onde o trabalho de vocês mais espera, e quanto?
 
 - A retrospectiva final (`docs/retrospectiva-02.md`) usa estes números para mostrar a evolução do processo
 - Datas: prova em **11/11**; *daily meetings* em 23 e 25/11; **entrega final em 30/11**
+
+---
+
+# Para conferir o entendimento
+
+1. Por que velocidade e estabilidade andam juntas nos dados do DORA?
+2. No projeto de vocês, o que conta como uma implantação?
+3. Um cartão levou 10 dias do backlog ao ar, com 8 horas de trabalho. Qual a eficiência de fluxo?
+4. Por que transformar a frequência de implantação em meta pode piorar o processo?
+5. O grupo tem 9 cartões em andamento e conclui 3 por semana. Qual o lead time médio esperado?
 
 ---
 

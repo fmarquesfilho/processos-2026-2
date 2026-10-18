@@ -196,6 +196,39 @@ Em muitas organizações, quem escreve o código e quem o põe no ar eram equipe
 
 ---
 
+# As práticas da integração contínua
+
+| Prática | Na prática, no grupo |
+|---|---|
+| todos integram na linha principal com frequência | ramos que vivem horas ou poucos dias, não semanas |
+| o build é automático e verifica a si mesmo | um comando roda compilação e testes; o CI roda o mesmo comando |
+| build quebrado se corrige primeiro | `main` vermelha é a prioridade da equipe, antes de qualquer cartão novo |
+| o build é rápido | feedback em minutos; Fowler sugere manter em torno de 10 |
+| todos veem o resultado | o check aparece no PR e na aba Actions |
+
+- Ter um servidor de CI não é fazer integração contínua: um ramo que fica três semanas aberto, com CI verde, continua sendo integração tardia
+- PRs pequenos são o que torna a integração frequente possível
+
+---
+
+# Integração, entrega e implantação contínuas
+
+```
+commit ──► build e testes ──► pacote pronto ──► ambiente de teste ──► produção
+```
+
+| | Até onde é automático | O que garante | Quem decide ir ao ar |
+|---|---|---|---|
+| Integração contínua | build e testes | toda mudança na `main` compila e passa nos testes | — |
+| Entrega contínua | até o ambiente de teste | a `main` está sempre pronta para ir ao ar | uma pessoa, com um clique |
+| Implantação contínua | até a produção | toda mudança aprovada vai ao ar | o pipeline |
+
+Na disciplina, o mínimo é a integração contínua com o portão. Quem implantar (o sistema de Web II, por exemplo) já mede a frequência de implantação na quarta.
+
+📖 **Ref.** [Martin Fowler — Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html)
+
+---
+
 # O que acontece num pull request
 
 ```
@@ -241,6 +274,33 @@ jobs:
 - Os comandos são os mesmos que o grupo roda localmente: o CI não deve ter passos que só ele conhece
 
 📖 **Ref.** [GitHub Actions — Quickstart](https://docs.github.com/en/actions/get-started/quickstart)
+
+---
+
+# Um CI rápido para os projetos da disciplina
+
+```yaml
+jobs:
+  kotlin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with: { distribution: temurin, java-version: 25, cache: gradle }   # reaproveita as dependências
+      - run: ./gradlew build              # compila, roda os testes e o lint configurado
+  go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-go@v6
+        with: { go-version-file: servico-go/go.mod }
+      - run: go vet ./... && go test ./...
+        working-directory: servico-go
+```
+
+- Dois jobs rodam em paralelo: o tempo total é o do mais lento
+- O cache de dependências tira minutos de cada execução
+- Um job por parte do sistema mostra no PR qual parte quebrou
 
 ---
 
@@ -311,6 +371,45 @@ CMD ["/app/bin/app"]                   # o comando que roda ao iniciar
 
 ---
 
+# Container não é máquina virtual
+
+| | Máquina virtual | Container |
+|---|---|---|
+| o que isola | um computador inteiro, com o próprio sistema operacional | um processo, que usa o núcleo do sistema da máquina |
+| tamanho | gigabytes | de poucos megabytes a centenas |
+| tempo para subir | minutos | segundos |
+| uso típico | rodar outro sistema operacional | empacotar e rodar uma aplicação |
+
+- No Mac e no Windows, o Docker roda os containers dentro de uma pequena máquina virtual Linux, e isso é transparente
+- O container leva o programa e as bibliotecas; o núcleo é o da máquina que o executa
+
+---
+
+# Uma imagem em dois estágios
+
+```dockerfile
+# Imagem do serviço de avisos (exemplo de Web II). Compila com a imagem do Go e
+# copia só o binário para uma imagem mínima, sem shell (distroless).
+FROM golang:1.26 AS build
+WORKDIR /src
+COPY go.mod go.sum ./
+RUN go mod download                # camada reaproveitada enquanto as dependências não mudam
+COPY . .
+RUN CGO_ENABLED=0 go build -o /avisos ./cmd/avisos
+
+FROM gcr.io/distroless/static-debian12
+COPY --from=build /avisos /avisos
+USER nonroot
+EXPOSE 50051
+ENTRYPOINT ["/avisos"]
+```
+
+- O compilador fica no primeiro estágio; a imagem final leva só o binário
+- Copiar `go.mod` antes do resto aproveita o cache: mudar o código não baixa as dependências de novo
+- `USER nonroot`: o processo não roda como administrador do container
+
+---
+
 # `docker compose`: o sistema inteiro com um comando
 
 ```yaml
@@ -353,6 +452,19 @@ docker compose ps                # os quatro serviços, healthy
 
 ---
 
+# Erros comuns
+
+| Erro | Consequência | Como evitar |
+|---|---|---|
+| senha ou token escrito no workflow ou no `compose.yaml` | fica no histórico do Git, visível para quem tiver acesso | *secrets* do repositório; `.env` fora do Git |
+| CI com passos que ninguém roda localmente | "no CI falha, aqui passa" | o CI chama os mesmos comandos do README |
+| teste instável ignorado ("roda de novo que passa") | a equipe deixa de confiar no vermelho | corrigir ou isolar o teste, com cartão no quadro |
+| `depends_on` sem `healthcheck` | a API sobe antes do banco aceitar conexões e cai | `condition: service_healthy` |
+| imagem construída na máquina de alguém | ninguém sabe reproduzir | a imagem sai do `Dockerfile`, no CI ou no `compose` |
+| portão que exclui administradores | o dono faz merge com o CI vermelho | "incluir administradores" na regra |
+
+---
+
 # Oficina — 25 minutos
 
 Cada grupo, no próprio repositório:
@@ -378,6 +490,16 @@ Quarta, a aula é sobre métricas DORA e o mapeamento do fluxo de valor. Os dois
 | Cada cartão: início e fim | campos de data do quadro (Sprint 1) | tempos de processamento e de espera |
 
 > Uma métrica sem método de coleta descrito não conta na rubrica. Anotem desde já **como** cada número foi obtido.
+
+---
+
+# Para conferir o entendimento
+
+1. Um grupo tem CI verde, mas cada integrante trabalha três semanas num ramo próprio. Isso é integração contínua?
+2. Qual a diferença entre entrega contínua e implantação contínua?
+3. O CI fica vermelho, e o merge acontece assim mesmo. O que falta configurar?
+4. Por que a imagem final do serviço Go não tem o compilador?
+5. O que `condition: service_healthy` resolve no `docker compose`?
 
 ---
 
