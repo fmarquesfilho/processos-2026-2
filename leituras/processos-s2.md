@@ -1,10 +1,10 @@
 # Leitura — Automação e fluxo de valor: DevOps, CI, containers, DORA e VSM (Sprint 2)
 
-Guia de apoio para as duas aulas da Sprint 2: DevOps, integração contínua e containers (19/10) e métricas DORA e mapeamento do fluxo de valor (21/10). Na Sprint 1, a pergunta era "como o trabalho flui, e onde ele trava". Nesta, é "como automatizar a entrega, e como saber, com números, se o processo está melhorando".
+Guia de apoio para as duas aulas da Sprint 2: DevOps, integração contínua e containers (21/10) e métricas DORA e mapeamento do fluxo de valor (26/10). Na Sprint 1, a pergunta era "como o trabalho flui, e onde ele trava". Nesta, é "como automatizar a entrega, e como saber, com números, se o processo está melhorando".
 
 Os slides das aulas são `slides/processos-slides-08.md` e `slides/processos-slides-09.md`. Os números do MUSI foram coletados do repositório em 15/10/2026, com os comandos mostrados.
 
-Como ler: os capítulos 2 a 5 são de 19/10; os capítulos 6 e 7, de 21/10. O capítulo 8 junta tudo na entrega.
+Como ler: os capítulos 2 a 5 são de 21/10; os capítulos 6 e 7, de 26/10. O capítulo 8 junta tudo na entrega.
 
 Capítulos:
 

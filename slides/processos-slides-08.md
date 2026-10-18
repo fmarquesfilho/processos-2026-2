@@ -89,7 +89,7 @@ style: |
 
 ## DevOps, integração contínua e containers
 
-DIM0510 — Turma 01 · Sprint 2 · aula de 19/10
+DIM0510 — Turma 01 · Sprint 2 · aula de 21/10
 
 Prof. Fernando · UFRN · 2026.2
 
@@ -99,8 +99,8 @@ Prof. Fernando · UFRN · 2026.2
 
 | | Data |
 |---|---|
-| Conteúdo da sprint | hoje (19/10) e quarta (21/10) |
-| Encontros online de acompanhamento | 26/10, 09/11 e 16/11 |
+| Conteúdo da sprint | hoje (21/10) e segunda (26/10) |
+| Encontros online de acompanhamento | 09/11 e 16/11 |
 | Prova escrita | **11/11 (quarta)**, em laboratório |
 | Oficina em sala e *daily* presencial (opcional) | 18/11 |
 | *Daily meetings* online | 23 e 25/11 |
@@ -109,8 +109,8 @@ Prof. Fernando · UFRN · 2026.2
 | Critério da Sprint 2 | Peso | Aula |
 |---|---|---|
 | Pipeline de CI e containerização | 25% | hoje |
-| Métricas DORA | 20% | quarta |
-| Mapeamento de Fluxo de Valor | 25% | quarta |
+| Métricas DORA | 20% | 26/10 |
+| Mapeamento de Fluxo de Valor | 25% | 26/10 |
 | MVP finalizado | 15% | — |
 | Retrospectiva final | 15% | — |
 
@@ -223,7 +223,7 @@ commit ──► build e testes ──► pacote pronto ──► ambiente de te
 | Entrega contínua | até o ambiente de teste | a `main` está sempre pronta para ir ao ar | uma pessoa, com um clique |
 | Implantação contínua | até a produção | toda mudança aprovada vai ao ar | o pipeline |
 
-Na disciplina, o mínimo é a integração contínua com o portão. Quem implantar (o sistema de Web II, por exemplo) já mede a frequência de implantação na quarta.
+Na disciplina, o mínimo é a integração contínua com o portão. Quem implantar (o sistema de Web II, por exemplo) já mede a frequência de implantação na próxima aula.
 
 📖 **Ref.** [Martin Fowler — Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html)
 
@@ -432,7 +432,7 @@ services:
 ```bash
 cd web2-2026-2/exemplos
 docker compose up --build        # do zero, numa máquina sem Java nem Go instalados
-docker compose ps                # os quatro serviços, healthy
+docker compose ps                # banco, avisos e api-ktor: healthy
 ```
 
 📖 **Ref.** [Docker Compose](https://docs.docker.com/compose/)
@@ -480,7 +480,7 @@ Ao final, cada grupo responde: a `main` de vocês aceita hoje um código que que
 
 # Comecem a medir hoje
 
-Quarta, a aula é sobre métricas DORA e o mapeamento do fluxo de valor. Os dois precisam de **histórico**, e o histórico começa agora:
+Na segunda, 26/10, a aula é sobre métricas DORA e o mapeamento do fluxo de valor. Os dois precisam de **histórico**, e o histórico começa agora:
 
 | O que registrar | Onde já fica | Para quê |
 |---|---|---|
