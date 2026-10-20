@@ -137,8 +137,7 @@ Esta é a última sprint: o que for entregue em 30/11 é o produto final do seme
 |------|-----|------|-----------|
 | 19/10 | Seg | 🔴 | Aula cancelada |
 | 21/10 | Qua | 🔴 | Aula cancelada |
-| 23/10 | Sex | 🎥 | Aulas em vídeo, publicadas no SIGAA até esta data: Cultura DevOps: CALMS e os Três Caminhos. Integração contínua com GitHub Actions, com gate em pull request. Containerização com Docker e `docker compose` |
-| 26/10 | Seg | 🟢 | Métricas DORA: o que medem e como coletar do repositório. Value Stream Mapping: estado atual, tempos de processamento e de espera, eficiência de fluxo e gargalos |
+| 26/10 | Seg | 🟢 | **DevOps, integração contínua e Docker (vídeo); métricas DORA e fluxo de valor**. Em vídeo, publicado no SIGAA até 23/10: Cultura DevOps: CALMS e os Três Caminhos. Integração contínua com GitHub Actions, com a proteção da branch nos pull requests. Containerização com Docker e `docker compose`. Em sala: Métricas DORA: o que medem e como coletar do repositório. Value Stream Mapping: estado atual, tempos de processamento e de espera, eficiência de fluxo e gargalos |
 | 28/10 | Qua | 🔴 | Dia do Servidor Público |
 | 02/11 | Seg | 🔴 | Finados |
 | 04/11 | Qua | 🔵 | Encontro online: revisão para a prova e dúvidas |
