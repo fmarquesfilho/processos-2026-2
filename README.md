@@ -18,7 +18,7 @@ Cada informação vive em um único documento. Em caso de divergência, vale o d
 | [Rúbricas](docs/RUBRICAS.md) | **O que entregar** em cada sprint e como é avaliado |
 | [Guia da Sprint 0](docs/SPRINT-0.md) | Templates de visão do produto, MVP, backlog e acordo de processo |
 | [Guia da Sprint 1](docs/SPRINT-1.md) · [tarefas](docs/SPRINT-1-TAREFAS.md) | Incremento, Kanban com WIP, métricas de fluxo, prática XP e retrospectiva |
-| [Guia da Sprint 2](docs/SPRINT-2.md) · [tarefas](docs/SPRINT-2-TAREFAS.md) | CI com portão, `docker compose`, métricas DORA, mapa do fluxo de valor e retrospectiva final |
+| [Guia da Sprint 2](docs/SPRINT-2.md) · [tarefas](docs/SPRINT-2-TAREFAS.md) | CI com proteção da `main`, `docker compose`, métricas DORA, mapa do fluxo de valor e retrospectiva final |
 | [Leituras](leituras/) | Guia de leitura de cada sprint (`processos-s1.md`, ...) |
 
 ---

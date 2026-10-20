@@ -2,7 +2,7 @@
 
 Prazo em [CRONOGRAMA.md](CRONOGRAMA.md#visão-geral): entrega final em **30/11 (segunda), 23:59**. Conteúdo em vídeo, publicado no SIGAA até 23/10, e na aula presencial de 26/10 (as aulas de 19 e 21/10 foram canceladas); acompanhamento online em 09/11 e 16/11; *daily meetings* online em 23 e 25/11 (presencial em 18/11, para quem avisar antes). O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-2). Os enunciados, prontos para virar cartões no quadro, estão em [SPRINT-2-TAREFAS.md](SPRINT-2-TAREFAS.md).
 
-A Sprint 2 é a última do semestre: o que for entregue em 30/11 é o produto final. É a sprint da **automação e do fluxo de valor**: o pipeline passa a ser o portão de entrada da branch principal, o projeto sobe com `docker compose`, e a equipe mede, com números tirados do próprio repositório, como entrega e onde o trabalho espera.
+A Sprint 2 é a última do semestre: o que for entregue em 30/11 é o produto final. É a sprint da **automação e do fluxo de valor**: o pipeline passa a proteger a branch principal: nada entra nela sem passar pelo CI, o projeto sobe com `docker compose`, e a equipe mede, com números tirados do próprio repositório, como entrega e onde o trabalho espera.
 
 ---
 
@@ -10,7 +10,7 @@ A Sprint 2 é a última do semestre: o que for entregue em 30/11 é o produto fi
 
 | Critério da rubrica | Peso | Em uma frase |
 |---|---|---|
-| Pipeline de CI e containerização | 25% | Build, testes e lint em todo push e PR; verde na branch principal; portão que impede merge com falha; `docker compose up` do zero |
+| Pipeline de CI e containerização | 25% | Build, testes e lint em todo push e PR; verde na branch principal; proteção da branch que impede merge com falha; `docker compose up` do zero |
 | Métricas DORA | 20% | Ao menos 3 métricas tiradas do repositório, com método descrito e reprodutível, e interpretação |
 | Mapeamento de Fluxo de Valor | 25% | O fluxo real com tempos medidos, eficiência de fluxo, 1 gargalo com número e 1 melhoria com métrica-alvo |
 | MVP finalizado | 15% | Os fluxos do MVP de ponta a ponta; README que roda em menos de 10 min; licença |
@@ -22,7 +22,7 @@ Além da entrega técnica, a nota da sprint tem a atividade no repositório (30%
 
 ## Material de apoio
 
-- Leitura da sprint: [`leituras/processos-s2.md`](../leituras/processos-s2.md) — DevOps, integração contínua, o portão e containers (em vídeo); métricas DORA e mapeamento do fluxo de valor (26/10).
+- Leitura da sprint: [`leituras/processos-s2.md`](../leituras/processos-s2.md) — DevOps, integração contínua, a proteção da `main` e containers (em vídeo); métricas DORA e mapeamento do fluxo de valor (26/10).
 - Slides: `slides/processos-slides-08.md` (vídeo) e `slides/processos-slides-09.md` (26/10).
 - O MUSI (`github.com/fmarquesfilho/musi`): o workflow do CI, a proteção da branch e os números DORA usados como exemplo nos slides de 26/10.
 - Um `docker compose` completo: `web2-2026-2/exemplos/compose.yaml` (banco, um serviço em Go e uma API, com health checks).
@@ -34,7 +34,7 @@ Além da entrega técnica, a nota da sprint tem a atividade no repositório (30%
 
 - O workflow roda **build, testes e lint** em todo push e em todo pull request.
 - A branch principal está protegida: PR obrigatório, o job do CI como status check obrigatório, valendo para administradores.
-- O portão foi provado: um PR que quebra um teste fica bloqueado. Guardem o link desse PR (ou um print) como evidência.
+- A proteção foi provada: um PR que quebra um teste fica bloqueado. Guardem o link desse PR (ou um print) como evidência.
 - O CI está verde na branch principal no prazo.
 - `docker compose up` sobe o projeto do zero, numa máquina que só tem Docker: sem instalar a linguagem, sem passos manuais. Health checks e `depends_on` com `service_healthy` quando houver mais de um serviço.
 
@@ -83,7 +83,7 @@ Além da entrega técnica, a nota da sprint tem a atividade no repositório (30%
 | Tempo | Conteúdo |
 |---|---|
 | 30 s | O que a sprint entregou |
-| 1 min | O pipeline: um PR bloqueado pelo portão e o CI verde na branch principal |
+| 1 min | O pipeline: um PR bloqueado pela proteção da branch e o CI verde na branch principal |
 | 1 min | `docker compose up` do zero e o MVP funcionando |
 | 1 min 30 s | As métricas DORA e o mapa do fluxo: o gargalo e a melhoria |
 | 1 min | A retrospectiva final: o que mudou no processo, com números |

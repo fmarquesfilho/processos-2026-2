@@ -122,11 +122,11 @@ Prof. Fernando · UFRN · 2026.2
 |---|---|---|
 | 15 | DevOps | O que muda quando quem desenvolve também entrega? |
 | 25 | Integração contínua | Como saber, a cada mudança, que nada quebrou? |
-| 10 | O portão (*gate*) | Como impedir que uma mudança com falha entre na `main`? |
+| 10 | A proteção da `main` | Como impedir que uma mudança com falha entre na `main`? |
 | 15 | Containers | Como rodar o projeto do mesmo jeito em qualquer máquina? |
 | 25 | Oficina | O pipeline e o compose do projeto de vocês |
 
-> Hoje fecha um ciclo que começou na Sprint 0: o CI que vocês montaram passa a ser o portão de entrada da `main`.
+> Hoje fecha um ciclo que começou na Sprint 0: o CI que vocês montaram passa a proteger a `main`: nada entra nela sem passar por ele.
 
 ---
 
@@ -223,7 +223,7 @@ commit ──► build e testes ──► pacote pronto ──► ambiente de te
 | Entrega contínua | até o ambiente de teste | a `main` está sempre pronta para ir ao ar | uma pessoa, com um clique |
 | Implantação contínua | até a produção | toda mudança aprovada vai ao ar | o pipeline |
 
-Na disciplina, o mínimo é a integração contínua com o portão. Quem implantar (o sistema de Web II, por exemplo) já mede a frequência de implantação na próxima aula.
+Na disciplina, o mínimo é a integração contínua com a proteção da `main`. Quem implantar (o sistema de Web II, por exemplo) já mede a frequência de implantação na próxima aula.
 
 📖 **Ref.** [Martin Fowler — Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html)
 
@@ -304,9 +304,9 @@ jobs:
 
 ---
 
-# O portão: proteger a `main`
+# A proteção da `main`
 
-Um CI que só avisa não impede nada. O portão é a regra de proteção da branch:
+Um CI que só avisa não impede nada. O que impede é a regra de proteção da branch:
 
 | Regra | Efeito |
 |---|---|
@@ -332,7 +332,7 @@ O CI é obrigatório, mas o PR não, e o dono passa por cima: é a ação A2 da 
 
 ---
 
-# Demonstração: o portão funcionando
+# Demonstração: a proteção funcionando
 
 1. Num ramo, quebrar um teste de propósito e abrir um PR
 2. Ver o check do CI ficar vermelho na página do PR
@@ -345,7 +345,7 @@ gh run list --limit 5 # as últimas execuções do workflow
 gh run view --log-failed   # só o log do passo que falhou
 ```
 
-> A pergunta que o portão responde: **alguém consegue colocar na `main` um código que quebra os testes?** A resposta certa é não, nem o dono do repositório.
+> A pergunta que a proteção responde: **alguém consegue colocar na `main` um código que quebra os testes?** A resposta certa é não, nem o dono do repositório.
 
 ---
 
@@ -444,10 +444,10 @@ docker compose ps                # banco, avisos e api-ktor: healthy
 | Antes | Na Sprint 2 |
 |---|---|
 | funciona na máquina de quem fez | o CI está verde no PR |
-| alguém olhou o código | o PR foi revisado e integrado pelo portão |
+| alguém olhou o código | o PR foi revisado e só integrado com o CI verde |
 | o README explica como instalar | `docker compose up` sobe o projeto do zero |
 
-- A rubrica cobra exatamente isso: workflow com build, testes e lint em todo push e PR; verde na `main`; portão que impede merge com falha; `docker compose up` do zero
+- A rubrica cobra exatamente isso: workflow com build, testes e lint em todo push e PR; verde na `main`; proteção que impede merge com falha; `docker compose up` do zero
 - Atualizem o `docs/definicao-de-pronto.md` do grupo
 
 ---
@@ -461,7 +461,7 @@ docker compose ps                # banco, avisos e api-ktor: healthy
 | teste instável ignorado ("roda de novo que passa") | a equipe deixa de confiar no vermelho | corrigir ou isolar o teste, com cartão no quadro |
 | `depends_on` sem `healthcheck` | a API sobe antes do banco aceitar conexões e cai | `condition: service_healthy` |
 | imagem construída na máquina de alguém | ninguém sabe reproduzir | a imagem sai do `Dockerfile`, no CI ou no `compose` |
-| portão que exclui administradores | o dono faz merge com o CI vermelho | "incluir administradores" na regra |
+| proteção que exclui administradores | o dono faz merge com o CI vermelho | "incluir administradores" na regra |
 
 ---
 
@@ -470,7 +470,7 @@ docker compose ps                # banco, avisos e api-ktor: healthy
 Cada grupo, no próprio repositório:
 
 1. **Workflow (8 min).** Conferir que o CI roda build, testes e lint em push e em PR. O que falta?
-2. **Portão (5 min).** Em *Settings → Branches* (ou *Rules*), proteger a `main`: PR obrigatório, o job do CI como status check obrigatório, valendo para administradores
+2. **Proteção (5 min).** Em *Settings → Branches* (ou *Rules*), proteger a `main`: PR obrigatório, o job do CI como status check obrigatório, valendo para administradores
 3. **Prova (7 min).** Abrir um PR que quebra um teste e mostrar o merge bloqueado
 4. **Compose (5 min).** Listar o que o `docker compose up` precisa subir no projeto e o que falta
 

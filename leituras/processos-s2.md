@@ -11,7 +11,7 @@ Capítulos:
 1. Onde a Sprint 2 se encaixa
 2. DevOps: CALMS e os Três Caminhos
 3. Integração contínua
-4. O portão: proteger a `main`
+4. A proteção da `main`
 5. Containers e `docker compose`
 6. Métricas DORA
 7. Mapeamento do fluxo de valor
@@ -124,11 +124,11 @@ jobs:
 
 📖 Ref. GitHub Actions — Quickstart: <https://docs.github.com/en/actions/get-started/quickstart>
 
-## 4. O portão: proteger a `main`
+## 4. A proteção da `main`
 
 ### 4.1 Por que o CI sozinho não basta
 
-Um CI que só avisa não impede nada: um PR vermelho continua com o botão de merge disponível, e um push direto na `main` nem passa por PR. O portão (*gate*) é a regra de proteção da branch, que transforma o aviso em bloqueio.
+Um CI que só avisa não impede nada: um PR vermelho continua com o botão de merge disponível, e um push direto na `main` nem passa por PR. O que impede é a regra de proteção da branch, que transforma o aviso em bloqueio.
 
 | Regra | Efeito |
 |---|---|
@@ -154,9 +154,9 @@ gh api repos/fmarquesfilho/musi/branches/main/protection \
 
 No MUSI, o CI é obrigatório, mas o PR não, e o dono do repositório pode passar por cima. É a ação A2 da retrospectiva da Sprint 1, cumprida em parte.
 
-### 4.3 Provar que o portão funciona
+### 4.3 Provar que a proteção funciona
 
-A rubrica pede um portão "impedindo merge com falha". A forma de mostrar é testá-lo:
+A rubrica pede uma proteção "impedindo merge com falha". A forma de mostrar é testá-la:
 
 1. Num ramo, quebrar um teste de propósito e abrir um PR.
 2. Ver o check do CI ficar vermelho e o merge bloqueado, com a mensagem de que o status check exigido não passou.
@@ -224,7 +224,7 @@ O exemplo de Tarefas de Web II (`web2-2026-2/exemplos/compose.yaml`) sobe banco,
 | Antes | Na Sprint 2 |
 |---|---|
 | funciona na máquina de quem fez | o CI está verde no PR |
-| alguém olhou o código | o PR foi revisado e integrado pelo portão |
+| alguém olhou o código | o PR foi revisado e só integrado com o CI verde |
 | o README explica como instalar | `docker compose up` sobe o projeto do zero |
 
 ## 6. Métricas DORA
@@ -395,7 +395,7 @@ A rubrica pede um gargalo sustentado por número e uma melhoria com métrica-alv
 
 | Critério | O que mostrar |
 |---|---|
-| Pipeline de CI e containerização | workflow com build, testes e lint em todo push e PR; verde na `main`; portão impedindo merge com falha (com a prova do capítulo 4.3); `docker compose up` subindo o projeto do zero |
+| Pipeline de CI e containerização | workflow com build, testes e lint em todo push e PR; verde na `main`; proteção impedindo merge com falha (com a prova do capítulo 4.3); `docker compose up` subindo o projeto do zero |
 | Métricas DORA | ao menos 3 métricas, com a definição de implantação, os comandos, o período, os valores e a interpretação |
 | Mapeamento de Fluxo de Valor | o mapa do fluxo real, com tempos de processamento e de espera medidos (e a fonte de cada um), a eficiência de fluxo calculada, 1 gargalo com número e 1 melhoria com métrica-alvo |
 | Retrospectiva final | `docs/retrospectiva-02.md`: as ações da retrospectiva 01 conferidas com evidência, a evolução do processo com dados e a avaliação do uso de IA |
@@ -415,7 +415,7 @@ As métricas e o mapa precisam de histórico, e o histórico de novembro começa
 ### Exercícios
 
 1. Escreva o workflow mínimo do projeto do grupo, com build, testes e lint, rodando em push na `main` e em pull request.
-2. Proteja a `main` do repositório do grupo e prove que o portão funciona, com um PR que quebra um teste.
+2. Proteja a `main` do repositório do grupo e prove que a proteção funciona, com um PR que quebra um teste.
 3. Escreva a definição de implantação do projeto e os comandos que contam as implantações da última semana.
 4. Calcule, para os PRs da Sprint 1 do grupo, o tempo da abertura ao merge. Qual é a mediana? Algum PR destoa? Por quê?
 5. Um item teve 4 h de trabalho e lead time de 5 dias corridos. Qual é a eficiência de fluxo, contando 24 h por dia? E contando 8 h úteis por dia? Qual das duas o grupo vai usar, e por quê?

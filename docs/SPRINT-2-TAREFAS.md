@@ -8,7 +8,7 @@ O **como** está em [SPRINT-2.md](SPRINT-2.md) e na leitura da sprint ([`leitura
 |---|---|---|
 | T1 | Planejar a sprint no quadro e começar a medir | Atividade no repositório · DORA (20%) · Fluxo de valor (25%) |
 | T2 | Completar o workflow de CI | Pipeline de CI e containerização (25%) |
-| T3 | Proteger a branch principal e provar o portão | Pipeline de CI e containerização (25%) |
+| T3 | Proteger a branch principal e provar que a proteção funciona | Pipeline de CI e containerização (25%) |
 | T4 | Subir o projeto com `docker compose` | Pipeline de CI e containerização (25%) |
 | T5 | Coletar e interpretar as métricas DORA | Métricas DORA (20%) |
 | T6 | Mapear o fluxo de valor | Mapeamento de Fluxo de Valor (25%) |
@@ -53,7 +53,7 @@ O **como** está em [SPRINT-2.md](SPRINT-2.md) e na leitura da sprint ([`leitura
 
 ---
 
-## T3 — Proteger a branch principal e provar o portão
+## T3 — Proteger a branch principal e provar que a proteção funciona
 
 **Objetivo.** Nenhum código que quebra os testes entra na branch principal.
 
@@ -173,7 +173,7 @@ O **como** está em [SPRINT-2.md](SPRINT-2.md) e na leitura da sprint ([`leitura
 **Objetivo.** Mostrar o produto e o processo, com números.
 
 **O que fazer.**
-- [ ] Seguir o roteiro do guia (o pipeline e o portão · o compose e o MVP · DORA e o fluxo · a retrospectiva)
+- [ ] Seguir o roteiro do guia (o pipeline e a proteção da branch · o compose e o MVP · DORA e o fluxo · a retrospectiva)
 - [ ] Garantir que **todos os integrantes falam**
 - [ ] Publicar o vídeo e linkar no `README.md`
 - [ ] Mostrar o andamento na *daily meeting* do grupo (23 ou 25/11, ou 18/11 em sala)

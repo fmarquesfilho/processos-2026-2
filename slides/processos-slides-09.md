@@ -206,7 +206,7 @@ Interpretação:
 |---|---|
 | Tempo de espera da mudança | PRs pequenos; revisão no mesmo dia; CI rápido; menos etapas manuais |
 | Frequência de implantação | implantação automática; integrar na `main` todo dia; lotes pequenos |
-| Taxa de falha de mudança | testes no CI; portão na `main`; revisão; mudanças pequenas, fáceis de entender |
+| Taxa de falha de mudança | testes no CI; proteção da `main`; revisão; mudanças pequenas, fáceis de entender |
 | Tempo de recuperação | alguém olhando o CI vermelho; reverter com um comando; logs e monitoramento |
 
 - Quase todas passam por **lotes pequenos**: é o Primeiro Caminho, do vídeo
@@ -390,7 +390,7 @@ Ao final, cada grupo diz: onde o trabalho de vocês mais espera, e quanto?
 
 | Critério | Peso | O que entregar |
 |---|---|---|
-| Pipeline de CI e containerização | 25% | workflow com build, testes e lint em push e PR; verde na `main`; portão; `docker compose up` do zero |
+| Pipeline de CI e containerização | 25% | workflow com build, testes e lint em push e PR; verde na `main`; proteção da `main`; `docker compose up` do zero |
 | Métricas DORA | 20% | ao menos 3 métricas, com método reprodutível e interpretação |
 | Mapeamento de Fluxo de Valor | 25% | mapa com tempos medidos, eficiência de fluxo, 1 gargalo com número e 1 melhoria com métrica-alvo |
 
