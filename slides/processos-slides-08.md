@@ -89,7 +89,7 @@ style: |
 
 ## DevOps, integração contínua e containers
 
-DIM0510 — Turma 01 · Sprint 2 · aula de 21/10
+DIM0510 — Turma 01 · Sprint 2 · aula em vídeo
 
 Prof. Fernando · UFRN · 2026.2
 
@@ -99,7 +99,7 @@ Prof. Fernando · UFRN · 2026.2
 
 | | Data |
 |---|---|
-| Conteúdo da sprint | hoje (21/10) e segunda (26/10) |
+| Conteúdo da sprint | este vídeo e a aula de segunda, 26/10 |
 | Encontros online de acompanhamento | 09/11 e 16/11 |
 | Prova escrita | **11/11 (quarta)**, em laboratório |
 | Oficina em sala e *daily* presencial (opcional) | 18/11 |

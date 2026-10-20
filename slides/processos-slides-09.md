@@ -105,7 +105,7 @@ Prof. Fernando · UFRN · 2026.2
 | 35 | Oficina | O fluxo do projeto de vocês, com números |
 | 5 | Entrega | O que a Sprint 2 cobra |
 
-> Na quarta foi o pipeline. Hoje, como saber se ele está ajudando, e onde o processo trava.
+> O vídeo foi o pipeline. Hoje, como saber se ele está ajudando, e onde o processo trava.
 
 ---
 
@@ -209,7 +209,7 @@ Interpretação:
 | Taxa de falha de mudança | testes no CI; portão na `main`; revisão; mudanças pequenas, fáceis de entender |
 | Tempo de recuperação | alguém olhando o CI vermelho; reverter com um comando; logs e monitoramento |
 
-- Quase todas passam por **lotes pequenos**: é o Primeiro Caminho da aula passada
+- Quase todas passam por **lotes pequenos**: é o Primeiro Caminho, do vídeo
 - A métrica não se melhora diretamente: melhora-se a prática, e a métrica mostra se funcionou
 
 ---
