@@ -40,7 +40,7 @@ Todos os grupos participam da *daily meeting* em todas as sprints, exceto na Spr
 |-------|---------|------|---------------|---------|
 | Sprint 0 | 17/08 a 14/09 | Fundamentos e proposta | — | 16/09 |
 | Sprint 1 | 14/09 a 16/10 | Fluxo de trabalho | 28 e 30/09, online | 16/10 |
-| Sprint 2 (final) | 01/11 a 30/11, com o conteúdo em vídeo (até 23/10) e em 26/10 | Automação e fluxo de valor | 23 e 25/11, online | 30/11 |
+| Sprint 2 (final) | 01/11 a 30/11, com o conteúdo em 26/10 e em vídeo (até 30/10) | Automação e fluxo de valor | 23 e 25/11, online | 30/11 |
 | Prova escrita | 11/11 | Sprints 0 e 1 e o conteúdo da Sprint 2 | — | — |
 | Prova de reposição | 02/12 | Sprints 0 a 2, cumulativa e opcional | — | — |
 
@@ -137,7 +137,7 @@ Esta é a última sprint: o que for entregue em 30/11 é o produto final do seme
 |------|-----|------|-----------|
 | 19/10 | Seg | 🔴 | Aula cancelada |
 | 21/10 | Qua | 🔴 | Aula cancelada |
-| 26/10 | Seg | 🟢 | **DevOps, integração contínua e Docker (vídeo); métricas DORA e fluxo de valor**. Em vídeo, publicado no SIGAA até 23/10: Cultura DevOps: CALMS e os Três Caminhos. Integração contínua com GitHub Actions, com a proteção da branch nos pull requests. Containerização com Docker e `docker compose`. Em sala: Métricas DORA: o que medem e como coletar do repositório. Value Stream Mapping: estado atual, tempos de processamento e de espera, eficiência de fluxo e gargalos |
+| 26/10 | Seg | 🟢 | **DevOps, integração contínua e Docker; métricas DORA e fluxo de valor (vídeo)**. Em sala: Cultura DevOps: CALMS e os Três Caminhos. Integração contínua com GitHub Actions, com a proteção da branch nos pull requests. Containerização com Docker e `docker compose`. Em vídeo, publicado no SIGAA até 30/10: Métricas DORA: o que medem e como coletar do repositório. Value Stream Mapping: estado atual, tempos de processamento e de espera, eficiência de fluxo e gargalos |
 | 28/10 | Qua | 🔴 | Dia do Servidor Público |
 | 02/11 | Seg | 🔴 | Finados |
 | 04/11 | Qua | 🔵 | Encontro online: revisão para a prova e dúvidas |
