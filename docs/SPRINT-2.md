@@ -1,6 +1,6 @@
 # Guia da Sprint 2 — DIM0510
 
-Prazo em [CRONOGRAMA.md](CRONOGRAMA.md#visão-geral): entrega final em **30/11 (segunda), 23:59**. Conteúdo em vídeo, publicado no SIGAA até 23/10, e na aula presencial de 26/10 (as aulas de 19 e 21/10 foram canceladas); acompanhamento online em 09/11 e 16/11; *daily meetings* online em 23 e 25/11 (presencial em 18/11, para quem avisar antes). O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-2). Os enunciados, prontos para virar cartões no quadro, estão em [SPRINT-2-TAREFAS.md](SPRINT-2-TAREFAS.md).
+Prazo em [CRONOGRAMA.md](CRONOGRAMA.md#visão-geral): entrega final em **30/11 (segunda), 23:59**. Conteúdo na aula presencial de 26/10 e em vídeo, publicado no SIGAA até 30/10 (as aulas de 19 e 21/10 foram canceladas); acompanhamento online em 09/11 e 16/11; *daily meetings* online em 23 e 25/11 (presencial em 18/11, para quem avisar antes). O que entregar e como é avaliado: [RUBRICAS.md](RUBRICAS.md#sprint-2). Os enunciados, prontos para virar cartões no quadro, estão em [SPRINT-2-TAREFAS.md](SPRINT-2-TAREFAS.md).
 
 A Sprint 2 é a última do semestre: o que for entregue em 30/11 é o produto final. É a sprint da **automação e do fluxo de valor**: o pipeline passa a proteger a branch principal: nada entra nela sem passar pelo CI, o projeto sobe com `docker compose`, e a equipe mede, com números tirados do próprio repositório, como entrega e onde o trabalho espera.
 
@@ -22,8 +22,8 @@ Além da entrega técnica, a nota da sprint tem a atividade no repositório (30%
 
 ## Material de apoio
 
-- Leitura da sprint: [`leituras/processos-s2.md`](../leituras/processos-s2.md) — DevOps, integração contínua, a proteção da `main` e containers (em vídeo); métricas DORA e mapeamento do fluxo de valor (26/10).
-- Slides: `slides/processos-slides-08.md` (vídeo) e `slides/processos-slides-09.md` (26/10).
+- Leitura da sprint: [`leituras/processos-s2.md`](../leituras/processos-s2.md) — DevOps, integração contínua, a proteção da `main` e containers (26/10); métricas DORA e mapeamento do fluxo de valor (vídeo).
+- Slides: `slides/processos-slides-08.md` (26/10) e `slides/processos-slides-09.md` (vídeo).
 - O MUSI (`github.com/fmarquesfilho/musi`): o workflow do CI, a proteção da branch e os números DORA usados como exemplo nos slides de 26/10.
 - Um `docker compose` completo: `web2-2026-2/exemplos/compose.yaml` (banco, um serviço em Go e uma API, com health checks).
 - A leitura de dívida técnica (`leituras/processos-s1-divida-tecnica.md`): as dívidas registradas podem aparecer no mapa do fluxo e na retrospectiva.
