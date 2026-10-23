@@ -100,7 +100,8 @@ Prof. Fernando · UFRN · 2026.2
 | | Data |
 |---|---|
 | Conteúdo da sprint | a aula de hoje e o vídeo (até 30/10) |
-| Encontros online de acompanhamento | 09/11 e 16/11 |
+| Revisão para a prova | 04/11 (presencial) e 09/11 (online) |
+| Encontro online de acompanhamento | 16/11 |
 | Prova escrita | **11/11 (quarta)**, em laboratório |
 | Oficina em sala e *daily* presencial (opcional) | 18/11 |
 | *Daily meetings* online | 23 e 25/11 |
