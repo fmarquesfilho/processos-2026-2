@@ -89,23 +89,22 @@ style: |
 
 ## Métricas DORA e mapeamento do fluxo de valor
 
-DIM0510 — Turma 01 · Sprint 2 · aula de 26/10
+DIM0510 — Turma 01 · Sprint 2 · aula em vídeo
 
 Prof. Fernando · UFRN · 2026.2
 
 ---
 
-# Roteiro de hoje
+# Roteiro do vídeo
 
 | Min | Bloco | Pergunta |
 |---|---|---|
 | 10 | Por que medir a entrega | O que separa equipes que entregam bem? |
 | 25 | Métricas DORA | O que medir, e como tirar do repositório? |
 | 15 | Fluxo de valor | Onde o trabalho espera? |
-| 35 | Oficina | O fluxo do projeto de vocês, com números |
 | 5 | Entrega | O que a Sprint 2 cobra |
 
-> O vídeo foi o pipeline. Hoje, como saber se ele está ajudando, e onde o processo trava.
+> Na aula de 26/10 vimos o pipeline. Neste vídeo, como saber se ele está ajudando, e onde o processo trava.
 
 ---
 
@@ -209,7 +208,7 @@ Interpretação:
 | Taxa de falha de mudança | testes no CI; proteção da `main`; revisão; mudanças pequenas, fáceis de entender |
 | Tempo de recuperação | alguém olhando o CI vermelho; reverter com um comando; logs e monitoramento |
 
-- Quase todas passam por **lotes pequenos**: é o Primeiro Caminho, do vídeo
+- Quase todas passam por **lotes pequenos**: é o Primeiro Caminho, da aula de 26/10
 - A métrica não se melhora diretamente: melhora-se a prática, e a métrica mostra se funcionou
 
 ---
@@ -373,16 +372,16 @@ A rubrica pede **um gargalo sustentado por número** e **uma melhoria com métri
 
 ---
 
-# Oficina — 35 minutos
+# Sugestão para o grupo
 
-Cada grupo, com o próprio quadro e o próprio repositório:
+Depois do vídeo, cada grupo faz no próprio quadro e repositório:
 
-1. **Desenhar (10 min).** As etapas reais do fluxo, da ideia ao "no ar". As do quadro, e as que o quadro não mostra
-2. **Medir (12 min).** Escolher três cartões já concluídos e anotar, para cada etapa, o tempo de espera e o de processamento, com a fonte de cada número
-3. **Calcular (5 min).** Lead time e eficiência de fluxo de cada cartão, e a média
-4. **Decidir (8 min).** Qual é o gargalo, com o número que o mostra, e qual melhoria testar, com a métrica-alvo
+1. **Desenhar.** As etapas reais do fluxo, da ideia ao "no ar". As do quadro, e as que o quadro não mostra
+2. **Medir.** Escolher três cartões já concluídos e anotar, para cada etapa, o tempo de espera e o de processamento, com a fonte de cada número
+3. **Calcular.** Lead time e eficiência de fluxo de cada cartão, e a média
+4. **Decidir.** Qual é o gargalo, com o número que o mostra, e qual melhoria testar, com a métrica-alvo
 
-Ao final, cada grupo diz: onde o trabalho de vocês mais espera, e quanto?
+Ao final, a pergunta é: onde o trabalho de vocês mais espera, e quanto?
 
 ---
 

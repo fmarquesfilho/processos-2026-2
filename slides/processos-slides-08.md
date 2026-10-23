@@ -89,7 +89,7 @@ style: |
 
 ## DevOps, integração contínua e containers
 
-DIM0510 — Turma 01 · Sprint 2 · aula em vídeo
+DIM0510 — Turma 01 · Sprint 2 · aula de 26/10
 
 Prof. Fernando · UFRN · 2026.2
 
@@ -99,7 +99,7 @@ Prof. Fernando · UFRN · 2026.2
 
 | | Data |
 |---|---|
-| Conteúdo da sprint | este vídeo e a aula de segunda, 26/10 |
+| Conteúdo da sprint | a aula de hoje e o vídeo (até 30/10) |
 | Encontros online de acompanhamento | 09/11 e 16/11 |
 | Prova escrita | **11/11 (quarta)**, em laboratório |
 | Oficina em sala e *daily* presencial (opcional) | 18/11 |
@@ -109,8 +109,8 @@ Prof. Fernando · UFRN · 2026.2
 | Critério da Sprint 2 | Peso | Aula |
 |---|---|---|
 | Pipeline de CI e containerização | 25% | hoje |
-| Métricas DORA | 20% | 26/10 |
-| Mapeamento de Fluxo de Valor | 25% | 26/10 |
+| Métricas DORA | 20% | vídeo |
+| Mapeamento de Fluxo de Valor | 25% | vídeo |
 | MVP finalizado | 15% | — |
 | Retrospectiva final | 15% | — |
 
@@ -223,7 +223,7 @@ commit ──► build e testes ──► pacote pronto ──► ambiente de te
 | Entrega contínua | até o ambiente de teste | a `main` está sempre pronta para ir ao ar | uma pessoa, com um clique |
 | Implantação contínua | até a produção | toda mudança aprovada vai ao ar | o pipeline |
 
-Na disciplina, o mínimo é a integração contínua com a proteção da `main`. Quem implantar (o sistema de Web II, por exemplo) já mede a frequência de implantação na próxima aula.
+Na disciplina, o mínimo é a integração contínua com a proteção da `main`. Quem implantar (o sistema de Web II, por exemplo) já mede a frequência de implantação no vídeo.
 
 📖 **Ref.** [Martin Fowler — Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html)
 
@@ -315,16 +315,11 @@ Um CI que só avisa não impede nada. O que impede é a regra de proteção da b
 | Exigir revisão aprovada (opcional) | outra pessoa precisa aprovar |
 | Incluir administradores | a regra vale para todos, inclusive quem é dono do repositório |
 
-No MUSI, hoje:
+No MUSI, hoje, no site: **Settings → Branches**, a regra da `main`.
 
-```bash
-gh api repos/fmarquesfilho/musi/branches/main/protection \
-  --jq '{checks: .required_status_checks.contexts, pr: (.required_pull_request_reviews != null), admins: .enforce_admins.enabled}'
-```
-
-```
-{"admins":false,"checks":["ci"],"pr":false}
-```
+- o status check `ci` é obrigatório
+- o pull request não é exigido
+- os administradores não são incluídos (o dono passa por cima)
 
 O CI é obrigatório, mas o PR não, e o dono passa por cima: é a ação A2 da retrospectiva, feita em parte.
 
@@ -339,11 +334,7 @@ O CI é obrigatório, mas o PR não, e o dono passa por cima: é a ação A2 da 
 3. Ver o botão de merge bloqueado: *Required status check "ci" has not succeeded*
 4. Corrigir, fazer push no mesmo ramo, e ver o check rodar de novo e ficar verde
 
-```bash
-gh pr checks          # o estado dos checks do PR atual, no terminal
-gh run list --limit 5 # as últimas execuções do workflow
-gh run view --log-failed   # só o log do passo que falhou
-```
+No site do GitHub: a página do PR mostra o check do CI e o botão de merge bloqueado; a aba **Actions** mostra cada execução do workflow e, dentro dela, o log do passo que falhou.
 
 > A pergunta que a proteção responde: **alguém consegue colocar na `main` um código que quebra os testes?** A resposta certa é não, nem o dono do repositório.
 
@@ -430,7 +421,7 @@ services:
 **Demonstração** — o exemplo de Tarefas de Web II: banco, um serviço em Go e a API.
 
 ```bash
-cd web2-2026-2/exemplos
+cd /workspaces/compose-demo/exemplos
 docker compose up --build        # do zero, numa máquina sem Java nem Go instalados
 docker compose ps                # banco, avisos e api-ktor: healthy
 ```
@@ -480,7 +471,7 @@ Ao final, cada grupo responde: a `main` de vocês aceita hoje um código que que
 
 # Comecem a medir hoje
 
-Na segunda, 26/10, a aula é sobre métricas DORA e o mapeamento do fluxo de valor. Os dois precisam de **histórico**, e o histórico começa agora:
+No vídeo (até 30/10), veremos as métricas DORA e o mapeamento do fluxo de valor. Os dois precisam de **histórico**, e o histórico começa agora:
 
 | O que registrar | Onde já fica | Para quê |
 |---|---|---|
