@@ -354,7 +354,7 @@ A rubrica pede **um gargalo sustentado por número** e **uma melhoria com métri
 | Métrica-alvo | — | "espera pela primeira revisão abaixo de 8 h nas duas semanas seguintes" |
 
 - A melhoria é uma mudança no processo, com dono, e não um pedido de esforço
-- A métrica-alvo é a mesma que mostrou o gargalo: assim dá para saber se melhorou
+- A métrica-alvo é a mesma que mostrou o gargalo: assim é possível saber se melhorou
 - É a mesma estrutura das ações da retrospectiva: responsável, prazo e como verificar
 
 ---
