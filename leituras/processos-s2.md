@@ -190,6 +190,10 @@ EXPOSE 8080                            # a porta que o programa usa
 CMD ["/app/bin/app"]                   # o comando que roda quando o container inicia
 ```
 
+Cada instrução do `Dockerfile` vira uma **camada**, e as camadas são reusadas em cache: mudou só o código, as dependências baixadas antes ficam em cache. Uma imagem **multi-stage** compila num primeiro estágio e copia só o binário para a imagem final, que fica mínima — o compilador não vai junto.
+
+📖 Ref. Docker — multi-stage builds: <https://docs.docker.com/build/building/multi-stage/>
+
 📖 Ref. Docker — What is a container?: <https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/>
 
 ### 5.2 O sistema inteiro com um comando
