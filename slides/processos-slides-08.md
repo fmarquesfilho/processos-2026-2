@@ -162,6 +162,21 @@ Em muitas organizações, quem escreve o código e quem o põe no ar eram equipe
 
 ---
 
+# O que é (e o que não é) DevOps
+
+| Não é | É |
+|---|---|
+| "o time de DevOps" | todos fazem entrega e operação |
+| comprar uma ferramenta | mudar o processo e medir |
+| entregar rápido sem qualidade | entregar rápido **e** estável |
+
+- **Não é** um cargo, uma equipe nova nem uma ferramenta.
+- **É** uma cultura: entregar e operar como responsabilidade **de uma equipe só**, com automação e medição.
+
+📖 **Ref.** [Atlassian — CALMS](https://www.atlassian.com/devops/frameworks/calms-framework)
+
+---
+
 # CALMS: cinco dimensões de DevOps
 
 | Letra | Dimensão | O que significa | No projeto de vocês |
@@ -243,6 +258,18 @@ Em muitas organizações, quem escreve o código e quem o põe no ar eram equipe
 - Ramo aberto três semanas, mesmo com CI verde, **não é** integração contínua — é integração tardia.
 
 > O valor do CI é o **loop curto**: erro agora é barato; erro na véspera da entrega, caro.
+
+---
+
+# O ciclo do CI em números
+
+- Alvo do Fowler: um build que roda em **~10 minutos**.
+- Ramos que vivem **horas ou poucos dias**, não semanas.
+- A cada push, o CI responde **verde ou vermelho** em minutos.
+
+> Se o CI demora 30 minutos, a equipe para de esperar, e o "feedback" deixa de ser rápido.
+
+📖 **Ref.** [Martin Fowler — Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)
 
 ---
 
@@ -448,6 +475,16 @@ ENTRYPOINT ["/avisos"]
 
 ---
 
+# A imagem em camadas
+
+- Cada instrução do `Dockerfile` vira uma **camada**; camadas são reusadas em cache.
+- Mudou o código? Só as camadas de cima são reconstruídas; as dependências ficam em cache.
+- Por isso `COPY go.mod go.sum` vem **antes** do `COPY . .`: baixar dependências vira uma camada estável.
+
+📖 **Ref.** [Docker — multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
+
+---
+
 # `docker compose`: o sistema inteiro com um comando
 
 ```yaml
@@ -513,6 +550,17 @@ Cada grupo, no próprio repositório, depois da aula:
 4. **Compose.** Listar o que o `docker compose up` precisa subir no projeto e o que falta
 
 Ao final, respondam: a `main` de vocês aceita hoje um código que quebra os testes?
+
+---
+
+# Da proteção à medição
+
+- A proteção da `main` impede o erro; as **métricas** mostram se o processo melhora.
+- O vídeo (até 30/10) cobre DORA e fluxo de valor — e eles precisam de **histórico**.
+
+> Comecem a anotar hoje: cada PR, cada execução do CI, cada implantação. Sem histórico, não há número.
+
+📖 **Ref.** [DORA — metrics](https://dora.dev/guides/dora-metrics/)
 
 ---
 
