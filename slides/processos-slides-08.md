@@ -131,6 +131,20 @@ Prof. Fernando · UFRN · 2026.2
 
 ---
 
+# Como acompanhar: as referências
+
+## Hoje não há código de Processos para rodar; os exemplos estão em dois lugares
+
+| Conceito | Onde |
+|---|---|
+| Proteção da `main` (e o PR que quebra) | MUSI: `github.com/fmarquesfilho/musi/pull/6` |
+| Workflow de CI | MUSI: `.github/workflows/ci.yml` |
+| `docker compose` e os Dockerfiles | `web2-2026-2`, tag `passo-17` |
+
+Abram depois, no navegador, e confiram com calma.
+
+---
+
 # Por que DevOps
 
 Em muitas organizações, quem escreve o código e quem o põe no ar eram equipes diferentes, com objetivos opostos:
@@ -180,6 +194,16 @@ Em muitas organizações, quem escreve o código e quem o põe no ar eram equipe
 
 ---
 
+# Os Três Caminhos em uma frase
+
+1. **Fluxo**: da ideia ao cliente, em lotes pequenos e sem espera.
+2. **Feedback**: o erro volta rápido — o CI é feedback em minutos.
+3. **Aprendizado**: experimentar e melhorar, todo dia.
+
+> Os três juntos é que são DevOps; um só não basta. Hoje o foco é o Segundo.
+
+---
+
 # Integração contínua
 
 > Cada integrante integra o seu trabalho à linha principal com frequência, pelo menos uma vez por dia, e cada integração é verificada por um build automatizado, com testes.
@@ -209,6 +233,16 @@ Em muitas organizações, quem escreve o código e quem o põe no ar eram equipe
 
 - Ter um servidor de CI não é fazer integração contínua: um ramo que fica três semanas aberto, com CI verde, continua sendo integração tardia
 - PRs pequenos são o que torna a integração frequente possível
+
+---
+
+# CI é feedback em minutos
+
+- Integrar na `main` **todo dia** (ou mais), em lotes pequenos.
+- O CI devolve o veredito em **minutos**: verde ou vermelho.
+- Ramo aberto três semanas, mesmo com CI verde, **não é** integração contínua — é integração tardia.
+
+> O valor do CI é o **loop curto**: erro agora é barato; erro na véspera da entrega, caro.
 
 ---
 
@@ -377,6 +411,18 @@ CMD ["/app/bin/app"]                   # o comando que roda ao iniciar
 
 ---
 
+# "Na minha máquina funciona"
+
+O container resolve a frase que mais atrasa projeto:
+
+- A **imagem** empacota o código e as dependências: roda igual em qualquer lugar.
+- O `docker compose` sobe tudo (banco, serviço, API) com um comando.
+- "Do zero" passa a ser **uma máquina que só tem Docker**.
+
+> Confiram: `web2-2026-2`, tag `passo-17` (o `compose.yaml` e os Dockerfiles).
+
+---
+
 # Uma imagem em dois estágios
 
 ```dockerfile
@@ -457,16 +503,16 @@ docker compose ps                # banco, avisos e api-ktor: healthy
 
 ---
 
-# Oficina — 25 minutos
+# Sugestão para o grupo
 
-Cada grupo, no próprio repositório:
+Cada grupo, no próprio repositório, depois da aula:
 
-1. **Workflow (8 min).** Conferir que o CI roda build, testes e lint em push e em PR. O que falta?
-2. **Proteção (5 min).** Em *Settings → Branches* (ou *Rules*), proteger a `main`: PR obrigatório, o job do CI como status check obrigatório, valendo para administradores
-3. **Prova (7 min).** Abrir um PR que quebra um teste e mostrar o merge bloqueado
-4. **Compose (5 min).** Listar o que o `docker compose up` precisa subir no projeto e o que falta
+1. **Workflow.** Conferir que o CI roda build, testes e lint em push e em PR. O que falta?
+2. **Proteção.** Em *Settings → Branches* (ou *Rules*), proteger a `main`: PR obrigatório, o job do CI como status check obrigatório, valendo para administradores
+3. **Prova.** Abrir um PR que quebra um teste e ver o merge bloqueado
+4. **Compose.** Listar o que o `docker compose up` precisa subir no projeto e o que falta
 
-Ao final, cada grupo responde: a `main` de vocês aceita hoje um código que quebra os testes?
+Ao final, respondam: a `main` de vocês aceita hoje um código que quebra os testes?
 
 ---
 
