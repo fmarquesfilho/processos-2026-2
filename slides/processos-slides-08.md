@@ -109,6 +109,10 @@ Prof. Fernando · UFRN · 2026.2
 
 > **Prova (11/11):** presencial, no laboratório, no horário da aula, no **Multiprova**, com questões fechadas sobre todo o conteúdo do curso. É permitida **uma folha A4 manuscrita, frente e verso**; nenhum outro material pode ser consultado.
 
+---
+
+# Critérios da Sprint 2
+
 | Critério da Sprint 2 | Peso | Aula |
 |---|---|---|
 | Pipeline de CI e containerização | 25% | hoje |
