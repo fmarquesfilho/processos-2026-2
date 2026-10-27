@@ -143,6 +143,8 @@ No GitHub, a configuração fica em *Settings → Branches* (proteção clássic
 
 ### 4.2 Conferir pelo terminal
 
+O `gh api` chama a API REST do GitHub para ler a configuração de proteção da branch, e o `--jq` filtra o JSON e mostra só o que interessa: os status checks exigidos, se o PR é obrigatório e se a regra vale para administradores.
+
 ```bash
 gh api repos/fmarquesfilho/musi/branches/main/protection \
   --jq '{checks: .required_status_checks.contexts, pr: (.required_pull_request_reviews != null), admins: .enforce_admins.enabled}'
@@ -161,6 +163,8 @@ A rubrica pede uma proteção "impedindo merge com falha". A forma de mostrar é
 1. Num ramo, quebrar um teste de propósito e abrir um PR.
 2. Ver o check do CI ficar vermelho e o merge bloqueado, com a mensagem de que o status check exigido não passou.
 3. Corrigir, fazer push no mesmo ramo, e ver o check rodar de novo e ficar verde.
+
+Os três comandos abaixo conferem isso pelo terminal: o estado dos checks do PR, as últimas execuções e o log do passo que falhou.
 
 ```bash
 gh pr checks              # o estado dos checks do PR atual
@@ -189,6 +193,8 @@ COPY build/install/app /app            # o que entra na imagem
 EXPOSE 8080                            # a porta que o programa usa
 CMD ["/app/bin/app"]                   # o comando que roda quando o container inicia
 ```
+
+A primeira instrução (`FROM`) escolhe a imagem de partida; `COPY` leva o programa para dentro; `EXPOSE` declara, sem abrir, a porta; `CMD` é o comando que roda quando o container inicia.
 
 Cada instrução do `Dockerfile` vira uma **camada**, e as camadas são reusadas em cache: mudou só o código, as dependências baixadas antes ficam em cache. Uma imagem **multi-stage** compila num primeiro estágio e copia só o binário para a imagem final, que fica mínima — o compilador não vai junto.
 
@@ -249,6 +255,8 @@ Por isso as métricas vêm em dois grupos, vazão e instabilidade, e uma equipe 
 | Instabilidade | Taxa de falha de mudança (*change fail rate*) | fração das implantações que exigiram intervenção imediata, como reverter ou corrigir às pressas |
 | Instabilidade | Taxa de retrabalho (*deployment rework rate*) | fração das implantações não planejadas, feitas por causa de um incidente em produção |
 
+Das cinco, duas são **taxas** (falha e retrabalho: a fração dos eventos que deram errado) e duas são **intervalos** (tempo de espera e recuperação: a duração entre dois instantes); a frequência pode ser uma contagem por período ou o intervalo entre implantações. Essa diferença muda a coleta: uma taxa conta eventos, um intervalo subtrai datas.
+
 A rubrica pede ao menos três, com o método de coleta descrito e reprodutível, e a interpretação.
 
 📖 Ref. DORA — Software delivery performance metrics: <https://dora.dev/guides/dora-metrics/>
@@ -267,6 +275,8 @@ Nenhuma das cinco métricas tem número sem uma definição de implantação. Ca
 O método começa por uma frase: "Neste projeto, uma implantação é ___, e a contamos com o comando ___."
 
 ### 6.4 Coletar do repositório
+
+Os comandos abaixo leem, no repositório, os eventos crus que alimentam as métricas: as execuções do CI na `main`, os tempos de cada PR, o resultado de cada execução e os commits por semana. O GitHub guarda essas datas e conclusões; o `gh` e o `git` resumem, sem a equipe precisar anotar nada à mão.
 
 ```bash
 # Execuções do CI na main, com data e resultado
@@ -371,6 +381,8 @@ Leitura do mapa:
 | Em revisão | abertura do PR, primeira revisão, aprovação |
 | CI | duração de cada execução (`gh run list`) |
 | Merge e implantação | `mergedAt` do PR e o registro da plataforma |
+
+O comando abaixo lê, para cada PR já integrado, os três instantes que viram os tempos de espera: a abertura, a primeira revisão e o merge.
 
 ```bash
 gh pr list --state merged --json number,createdAt,mergedAt,reviews \

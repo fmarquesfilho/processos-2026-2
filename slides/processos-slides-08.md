@@ -332,6 +332,8 @@ jobs:
       - run: make test                # se um comando falha, o job fica vermelho
 ```
 
+O `on` lista os eventos que disparam o workflow: `push` na `main` e a abertura de `pull_request`. É ele que faz o CI rodar na tentativa de merge — antes de o código entrar na `main` — e também no que já entrou.
+
 - `uses` reaproveita uma ação pronta; `run` executa um comando
 - Os comandos são os mesmos que o grupo roda localmente: o CI não deve ter passos que só ele conhece
 

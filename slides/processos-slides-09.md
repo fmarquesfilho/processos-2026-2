@@ -134,6 +134,8 @@ O programa de pesquisa DORA (DevOps Research and Assessment) acompanha há mais 
 | Instabilidade | **Taxa de falha de mudança** (*change fail rate*) | fração das implantações que exigiram intervenção imediata (reverter, corrigir às pressas) |
 | Instabilidade | **Taxa de retrabalho** (*deployment rework rate*) | fração das implantações não planejadas, feitas por causa de um incidente |
 
+Das cinco, duas são **taxas** (falha e retrabalho: a fração dos eventos que deram errado) e duas são **intervalos** (tempo de espera e recuperação: a duração entre dois instantes); a frequência pode ser uma contagem por período ou o intervalo entre implantações. Essa diferença muda a coleta: uma taxa conta eventos, um intervalo subtrai datas.
+
 A rubrica pede **ao menos três**, com o método de coleta descrito e reprodutível, e a interpretação.
 
 📖 **Ref.** [DORA — Software delivery performance metrics](https://dora.dev/guides/dora-metrics/)
@@ -156,6 +158,8 @@ Sem essa definição, nenhuma das cinco métricas tem número. Escolham uma e es
 ---
 
 # Tirando os números do repositório
+
+Os três comandos abaixo leem, no repositório, os eventos crus que viram os números: as execuções do CI, os tempos de cada PR e o resultado de cada execução. O GitHub guarda essas datas e conclusões; o `gh` resume, sem a equipe precisar anotar nada à mão.
 
 ```bash
 # Frequência: execuções do CI na main (cada push na main é uma implantação no MUSI)
@@ -315,6 +319,8 @@ Uma história de usuário de um projeto da disciplina (exemplo ilustrativo):
 | Em revisão | abertura do PR → primeira revisão → aprovação |
 | CI | duração de cada execução (`gh run list`) |
 | Merge e implantação | `mergedAt` do PR e o registro da plataforma |
+
+O comando abaixo lê, para cada PR já integrado, os três instantes que viram os tempos de espera: a abertura, a primeira revisão e o merge.
 
 ```bash
 gh pr list --state merged --json number,createdAt,mergedAt,reviews \
