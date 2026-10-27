@@ -133,13 +133,13 @@ Prof. Fernando · UFRN · 2026.2
 
 # Como acompanhar: as referências
 
-## Hoje não há código de Processos para rodar; os exemplos estão em dois lugares
+## Os exemplos estão no repositório MUSI
 
 | Conceito | Onde |
 |---|---|
 | Proteção da `main` (e o PR que quebra) | MUSI: `github.com/fmarquesfilho/musi/pull/6` |
 | Workflow de CI | MUSI: `.github/workflows/ci.yml` |
-| `docker compose` e os Dockerfiles | `web2-2026-2`, tag `passo-17` |
+| `docker compose` e os Dockerfiles | MUSI: `docker-compose.yml` e os Dockerfiles |
 
 Abram depois, no navegador, e confiram com calma.
 
@@ -420,6 +420,10 @@ EXPOSE 8080                            # a porta que o programa usa
 CMD ["/app/bin/app"]                   # o comando que roda ao iniciar
 ```
 
+- `FROM` escolhe a imagem de partida; `COPY` leva arquivos para dentro da imagem; `EXPOSE` apenas **declara** a porta (não a abre); `CMD` é o que roda ao iniciar o container.
+- `docker build` executa cada instrução na ordem e guarda o resultado como uma **camada**, empilhada sobre a anterior.
+- A imagem é imutável e só de leitura; ao rodar, o container ganha uma camada fina de escrita por cima, que some quando ele para.
+
 📖 **Ref.** [Docker — What is a container?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)
 
 ---
@@ -446,32 +450,31 @@ O container resolve a frase que mais atrasa projeto:
 - O `docker compose` sobe tudo (banco, serviço, API) com um comando.
 - "Do zero" passa a ser **uma máquina que só tem Docker**.
 
-> Confiram: `web2-2026-2`, tag `passo-17` (o `compose.yaml` e os Dockerfiles).
+> Confiram: no MUSI, o `docker-compose.yml` e os Dockerfiles (`api-ktor`, `api-quarkus` e `services`).
 
 ---
 
 # Uma imagem em dois estágios
 
 ```dockerfile
-# Imagem do serviço de avisos (exemplo de Web II). Compila com a imagem do Go e
-# copia só o binário para uma imagem mínima, sem shell (distroless).
-FROM golang:1.26 AS build
-WORKDIR /src
-COPY go.mod go.sum ./
+# O serviço de busca do MUSI, em Go. Compila na imagem do Go e copia só o
+# binário estático para uma imagem mínima (scratch), sem shell.
+FROM golang:1.27-alpine AS build
+WORKDIR /build
+COPY go.mod ./
 RUN go mod download                # camada reaproveitada enquanto as dependências não mudam
 COPY . .
-RUN CGO_ENABLED=0 go build -o /avisos ./cmd/avisos
+RUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o /servidor ./cmd/servidor
 
-FROM gcr.io/distroless/static-debian12
-COPY --from=build /avisos /avisos
-USER nonroot
-EXPOSE 50051
-ENTRYPOINT ["/avisos"]
+FROM scratch
+COPY --from=build /servidor /servidor
+EXPOSE 9090
+ENTRYPOINT ["/servidor"]
 ```
 
 - O compilador fica no primeiro estágio; a imagem final leva só o binário
 - Copiar `go.mod` antes do resto aproveita o cache: mudar o código não baixa as dependências de novo
-- `USER nonroot`: o processo não roda como administrador do container
+- `scratch`: a imagem final não tem shell nem biblioteca C — só o binário estático
 
 ---
 
@@ -502,12 +505,17 @@ services:
       banco: { condition: service_healthy }           # só sobe com o banco pronto
 ```
 
-**Demonstração** — o exemplo de Tarefas de Web II: banco, um serviço em Go e a API.
+- `services`: cada processo do sistema (banco, API, serviço) é um serviço descrito ali.
+- `image` usa uma imagem pronta; `build` constrói a partir de um `Dockerfile`.
+- `ports` mapeia a porta do container para a da máquina; `environment` injeta configuração.
+- `healthcheck` define "está pronto"; `depends_on: service_healthy` só sobe o dependente quando o banco aceita conexão.
+
+**Demonstração** — o MUSI: banco, duas APIs (Ktor e Quarkus) e um serviço em Go.
 
 ```bash
-cd /workspaces/compose-demo/exemplos
+cd /workspaces/musi
 docker compose up --build        # do zero, numa máquina sem Java nem Go instalados
-docker compose ps                # banco, avisos e api-ktor: healthy
+docker compose ps                # banco, api-ktor, api-quarkus e busca: healthy
 ```
 
 📖 **Ref.** [Docker Compose](https://docs.docker.com/compose/)

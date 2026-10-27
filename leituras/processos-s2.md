@@ -219,7 +219,7 @@ services:
 - O `healthcheck` diz como saber se o serviço está pronto; o `depends_on` com `service_healthy` faz a ordem de subida respeitar isso.
 - "Do zero" quer dizer numa máquina que só tem Docker: sem a linguagem instalada, sem banco configurado à mão, sem passos manuais.
 
-O exemplo de Tarefas de Web II (`web2-2026-2/exemplos/compose.yaml`) sobe banco, um serviço em Go e a API com `docker compose up --build`.
+O MUSI (`docker-compose.yml`) sobe banco, duas APIs (Ktor e Quarkus) e um serviço em Go com `docker compose up --build`.
 
 📖 Ref. Docker Compose: <https://docs.docker.com/compose/>
 
