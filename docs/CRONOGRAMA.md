@@ -52,7 +52,7 @@ Todos os grupos participam da *daily meeting* em todas as sprints, exceto na Spr
 |------|-----|--------|
 | 07/09 | Segunda | Independência do Brasil |
 | 12/10 | Segunda | Nossa Senhora Aparecida |
-| 28/10 | Quarta | Dia do Servidor Público |
+| 30/10 | Sexta | Dia do Servidor Público |
 | 02/11 | Segunda | Finados |
 
 Fonte: Calendário Universitário UFRN 2026, Resolução nº 074/2025-CONSAD.
@@ -77,7 +77,7 @@ No fim de cada sprint, o professor conversa com cada grupo no formato de uma *da
 | 05 e 07/10 | 🟢 presencial | 🟢 presencial |
 | 12 e 14/10 | 🔴 feriado | 🔵 online |
 | 19 e 21/10 | 🔴 cancelada | 🔴 cancelada |
-| 26 e 28/10 | 🟢 presencial | 🔴 feriado |
+| 26 e 28/10 | 🟢 presencial | 🟢 presencial (laboratório) |
 | 02 e 04/11 | 🔴 feriado | 🟢 presencial |
 | 09 e 11/11 | 🔵 online | 🟢 presencial (prova) |
 | 16 e 18/11 | 🔵 online | 🟢 presencial |
@@ -138,7 +138,7 @@ Esta é a última sprint: o que for entregue em 30/11 é o produto final do seme
 | 19/10 | Seg | 🔴 | Aula cancelada |
 | 21/10 | Qua | 🔴 | Aula cancelada |
 | 26/10 | Seg | 🟢 | **DevOps, integração contínua e Docker; métricas DORA e fluxo de valor (vídeo)**. Em sala: Cultura DevOps: CALMS e os Três Caminhos. Integração contínua com GitHub Actions, com a proteção da branch nos pull requests. Containerização com Docker e `docker compose`. Em vídeo, publicado no SIGAA até 30/10: Métricas DORA: o que medem e como coletar do repositório. Value Stream Mapping: estado atual, tempos de processamento e de espera, eficiência de fluxo e gargalos |
-| 28/10 | Qua | 🔴 | Dia do Servidor Público |
+| 28/10 | Qua | 🟢 | Sem encontro de Processos (conteúdo dado em 26/10) |
 | 02/11 | Seg | 🔴 | Finados |
 | 04/11 | Qua | 🟢 | Revisão para a prova e dúvidas, em sala |
 | 09/11 | Seg | 🔵 | Revisão para a prova e dúvidas, online |
