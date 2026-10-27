@@ -123,6 +123,16 @@ Prof. Fernando · UFRN · 2026.2
 
 ---
 
+# O que entregar na Sprint 2
+
+- **CI**: workflow com build, teste e lint em todo push e PR, verde na `main`, gate impedindo merge com falha; `docker compose up` do zero.
+- **Métricas DORA**: ao menos 3 do próprio repositório, com método de coleta reprodutível e interpretação.
+- **VSM**: diagrama com tempos medidos, eficiência de fluxo, 1 gargalo com número e 1 melhoria com métrica-alvo.
+- **MVP** ponta a ponta; README (roda em menos de 10 min); licença.
+- **Retrospectiva final** (`docs/retrospectiva-02.md`) com evidência, evolução com dados e `docs/uso-de-ia.md`.
+
+---
+
 # Roteiro de hoje
 
 | Min | Bloco | Pergunta |
