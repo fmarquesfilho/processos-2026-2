@@ -89,13 +89,13 @@ style: |
 
 ## Métricas DORA e mapeamento do fluxo de valor
 
-DIM0510 — Turma 01 · Sprint 2 · aula em vídeo
+DIM0510 — Turma 01 · Sprint 2 · aula de 28/10
 
 Prof. Fernando · UFRN · 2026.2
 
 ---
 
-# Roteiro do vídeo
+# Roteiro da aula
 
 | Min | Bloco | Pergunta |
 |---|---|---|
@@ -104,7 +104,7 @@ Prof. Fernando · UFRN · 2026.2
 | 15 | Fluxo de valor | Onde o trabalho espera? |
 | 5 | Entrega | O que a Sprint 2 cobra |
 
-> Na aula de 26/10 vimos o pipeline. Neste vídeo, como saber se ele está ajudando, e onde o processo trava.
+> Na aula de 26/10 vimos o pipeline. Nesta aula, como saber se ele está ajudando, e onde o processo trava.
 
 ---
 
@@ -374,7 +374,7 @@ A rubrica pede **um gargalo sustentado por número** e **uma melhoria com métri
 
 # Sugestão para o grupo
 
-Depois do vídeo, cada grupo faz no próprio quadro e repositório:
+Depois da aula, cada grupo faz no próprio quadro e repositório:
 
 1. **Desenhar.** As etapas reais do fluxo, da ideia ao "no ar". As do quadro, e as que o quadro não mostra
 2. **Medir.** Escolher três cartões já concluídos e anotar, para cada etapa, o tempo de espera e o de processamento, com a fonte de cada número
