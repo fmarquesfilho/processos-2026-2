@@ -402,6 +402,8 @@ Ao final, a pergunta é: onde o trabalho de vocês mais espera, e quanto?
 - A retrospectiva final (`docs/retrospectiva-02.md`) usa estes números para mostrar a evolução do processo
 - Datas: prova em **11/11**; *daily meetings* em 23 e 25/11; **entrega final em 30/11**
 
+> **Prova (11/11):** presencial, no laboratório, no horário da aula, no **Multiprova**, com questões fechadas sobre todo o conteúdo do curso. É permitida **uma folha A4 manuscrita, frente e verso**; nenhum outro material pode ser consultado.
+
 ---
 
 # Para conferir o entendimento
