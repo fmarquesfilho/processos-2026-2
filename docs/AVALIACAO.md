@@ -122,10 +122,10 @@ Condições: declaração na Sprint 0; produto comum com repositórios vinculado
 
 | Prova | Data | Conteúdo |
 |-------|------|----------|
-| Prova escrita, obrigatória | 11/11 | Sprints 0, 1 e 2: modelos de ciclo de vida, Manifesto Ágil, Scrum, backlog e estimativa, XP, Lean, Kanban, métricas de fluxo, retrospectivas, DevOps, CI/CD, Docker, métricas DORA e Mapeamento de Fluxo de Valor |
-| Prova de reposição, opcional | 02/12 | O mesmo conteúdo da prova escrita |
+| Prova escrita, obrigatória | 11/11, online | Sprints 0 e 1: modelos de ciclo de vida, Manifesto Ágil, Scrum, backlog e estimativa, XP, Lean, Kanban, métricas de fluxo, retrospectivas e dívida técnica |
+| Prova de reposição, opcional | 02/12 | Cumulativa, Sprints 0 a 2: o conteúdo da prova escrita e mais DevOps, CI/CD, Docker, métricas DORA e Mapeamento de Fluxo de Valor |
 
-Ambas são individuais, com questões fechadas, no Multiprova, presenciais, em laboratório, aplicadas no horário da aula. Permitida consulta a uma folha A4 manuscrita, frente e verso.
+Ambas são individuais, com questões fechadas, no Multiprova. A prova de reposição é presencial, em laboratório, no horário da aula, com consulta permitida a uma folha A4 manuscrita, frente e verso. A prova escrita de 11/11, prevista no mesmo formato, foi aplicada online (mudança avisada em 10/11): disponível de 11/11, 10:00, a 12/11, 10:00, com 50 minutos a partir do início, para 20 questões.
 
 A prova de reposição é aberta a qualquer estudante, inclusive a quem já obteve nota alta na primeira. Ela não substitui automaticamente a nota anterior: **vale a maior das duas**. Quem não comparecer permanece com a nota da primeira prova.
 
